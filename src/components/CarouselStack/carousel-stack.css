@@ -1,0 +1,160 @@
+/* <CHANGE> Stacked-card carousel with autoplay, large rounding, and a small blue flourish */
+.cs {
+  position: relative;
+  width: 100%;
+  /* Increased height for large screens */
+  height: 400px;
+  margin-right: 20px;
+}
+
+/* Card base - Updated for more circular design */
+.cs-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 45px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  background: #ffffff;
+  transition: transform 300ms ease, opacity 300ms ease, filter 300ms ease;
+}
+
+/* Front card is on top */
+/* Stronger shadow for the front/upper card */
+.cs-card--front {
+  z-index: 2;
+  width: 70%;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Decorative small blue flourish near bottom-left on the front card */
+.cs-card--front::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  transform: rotate(45deg);
+  box-shadow: 0 3px 10px rgba(59, 130, 246, 0.4);
+  opacity: 0.85;
+  z-index: 3;
+}
+
+/* Back card peeks from the right */
+.cs-card--back {
+  z-index: 1;
+  transform: translateX(40px) scale(0.94);
+  opacity: 0.9;
+  filter: blur(0.8px);
+  pointer-events: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cs-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* Controls */
+.cs-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transition: all 200ms ease;
+  font-weight: bold;
+  font-size: 22px;
+}
+.cs-nav:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.22);
+}
+.cs-prev {
+  left: 18px;
+}
+.cs-next {
+  right: 18px;
+}
+
+/* Dots */
+.cs-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.cs-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.cs-dot:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+.cs-dot.is-active {
+  background: #3b82f6;
+  transform: scale(1.2);
+}
+
+/* Large screen adjustments */
+@media (min-width: 1600px) {
+  .cs {
+    height: 520px;
+  }
+
+  .cs-card {
+    border-radius: 45px;
+  }
+
+  .cs-nav {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+
+  .cs-prev {
+    left: 24px;
+  }
+  .cs-next {
+    right: 24px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cs-card {
+    transition: none;
+  }
+  .cs-nav {
+    transition: none;
+  }
+}
+
+@media (min-width: 1920px) {
+  .cs-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+}

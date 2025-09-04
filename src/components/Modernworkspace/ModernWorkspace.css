@@ -1,0 +1,142 @@
+/* <CHANGE> Editorial two-column layout styled like the screenshot */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+
+.mw {
+  background: #ffffff;
+  color: #0f172a;
+  /* padding: 40px 24px; */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mw__inner {
+  
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 3vw;
+}
+
+.mw__copy {
+  max-width: 580px;
+}
+
+.mw__title {
+  font-family: "Italiana", serif;
+  font-weight: 400;
+  letter-spacing: 4%;
+  line-height: 100%;
+  font-size: 80px;
+  margin: 10px 0 16px;
+  text-align: left;
+}
+
+.mw__text {
+  font-family: "Jura";
+  font-size: 21px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #6b7280;
+  letter-spacing: 10%;
+  text-align: left;
+}
+
+.mw__link {
+  color: #3b82f6;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+/* Media container to the right on larger screens */
+.mw__media {
+  width: 100%;
+}
+
+/* Larger screens: side-by-side like the screenshot */
+@media (min-width: 900px) {
+  .mw__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+  }
+  .mw__copy { 
+    flex: 0 0 45%; 
+    padding-left: 20px;
+  }
+  .mw__media { 
+    flex: 1; 
+    padding-right: 20px;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1400px) {
+  .mw {
+    padding: 60px 40px;
+  }
+  
+  .mw__inner {
+    gap: 10px;
+  }
+  
+  .mw__title {
+    font-size: 90px;
+    margin: 12px 0 20px;
+  }
+  
+  .mw__text {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .mw__copy { 
+    flex: 0 0 42%; 
+    padding-left: 30px;
+  }
+  
+  .mw__media { 
+    padding-right: 30px;
+  }
+}
+
+/* Extra large screens */
+@media (max-width: 1920px) {
+  
+  .mw {
+    padding: 0px 20px;
+  }
+
+  .mw__copy {
+    max-width: 1880px;
+}
+  
+/* .mw__inner {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+} */
+  
+  /* .mw__title {
+    font-size: 100px;
+  }
+  
+  .mw__text {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  
+  .mw__copy { 
+    flex: 0 0 40%; 
+
+    position: relative;
+    
+  }
+  
+  .mw__media { 
+       padding-right: 40px;
+  } */
+}

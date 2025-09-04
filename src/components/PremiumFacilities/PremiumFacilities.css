@@ -1,0 +1,236 @@
+.premium-facilities {
+  width: 100%;
+}
+
+.section-wrapper {
+  position: relative;
+  height: 600vh; /* enough height for all sticky sections to scroll through */
+}
+
+.premium-facilities-header {
+  text-align: center;
+  padding: 0rem 0;
+  /* background-color: #f9fafb; */
+}
+
+.premium-facilities-title {
+  font-family: "Italiana", serif;
+  font-size: 70px;
+  font-weight: 400;
+  color: #1f2937;
+  letter-spacing: 0.05em;
+  text-align: start;
+  padding: 0rem 2rem;
+}
+
+.facility-section {
+  position: sticky;
+  top: 0; /* stick to the top of viewport */
+  height: 100vh; /* full screen each */
+  overflow: hidden;
+}
+
+.facility-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1); /* Start slightly zoomed in */
+  transition: transform 2.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center center;
+}
+
+.facility-image.in-view {
+  transform: scale(1); /* Return to normal size when in view */
+}
+
+.overlay-parking {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay-lobby {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-cafe {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-security {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay-lift {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.facility-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  top: 0%;
+  margin-top: 0%;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+.facility-heading {
+  font-family: "Italiana", serif;
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  height: 100px;         
+  line-height: 100px;
+  overflow: hidden;
+}
+
+.heading-text {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(.16,1,.3,1);
+}
+
+.heading-text span {
+  height: 100px;   /* 👈 same as font-size */
+  line-height: 100px;
+  display: block;
+}
+
+.facility-heading:hover .heading-text {
+  transform: translateY(-100px); /* 👈 shift by the exact text height */
+}
+
+
+
+.facility-text-container {
+  max-width: 38rem;
+  text-align: center;
+}
+
+.facility-description {
+  font-family: "Jura";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  margin-bottom: 1rem;
+}
+
+.facility-divider {
+   --width-of-loader: 2px;   /* thin vertical line */
+  --loader-color: #ffffff;  /* glowing white */
+  width: var(--width-of-loader);
+  height: 100px;             /* adjust vertical length */
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  margin: 1rem auto;        /* center it */
+}
+
+.facility-divider::before {
+   content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 100%;              /* full width (since vertical) */
+  height: 0%;
+  border-radius: 30px;
+  animation: moving-vertical 1.5s ease-in-out infinite;
+}
+
+@keyframes moving-vertical {
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+    bottom: 0;
+    top: unset;
+  }
+}
+
+
+.facility-tagline {
+  position: relative; /* needed for the overlay */
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  z-index: 1; /* keep text above overlay */
+  display: inline-block; /* ensures overlay fits tight */
+  padding: 0.4em 0.8em; /* some space inside */
+}
+
+.facility-tagline::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cover entire text area */
+  border-radius: 999px; /* full circular pill shape */
+  background: rgba(0, 0, 0, 0.7); /* soft overlay (blue tint example) */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* subtle shadow */
+  z-index: -1; /* put behind the text */
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+.facility-section {
+  position: sticky;
+  top: 0; /* stick to the top of viewport */
+  height: 100vh; /* full screen each */
+  overflow: hidden; 
+}
+
+.facility-heading {
+  font-family: "Italiana", serif;
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  height: 100px;         
+  line-height: 100px;
+  overflow: hidden;
+}
+
+.heading-text {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(.16,1,.3,1);
+}
+
+.heading-text span {
+  height: 100px;   /* 👈 same as font-size */
+  line-height: 100px;
+  display: block;
+}
+
+.facility-heading:hover .heading-text {
+  transform: translateY(-100px); /* 👈 shift by the exact text height */
+}
+
+
+  .facility-description {
+    font-family: "Jura";
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,123 @@
+/* nakshatra-section.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+
+.nakshatra {
+  max-width: 1500vw;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 20px;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Header with logo aligned left and title centered */
+.nakshatra__header {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the title */
+}
+
+.nakshatra__brand-logo {
+  position: absolute;
+  top: 0%;
+  left: 1%;
+  height: 120px;   /* adjust to match screenshot */
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+
+}
+
+.nakshatra__title {
+  font-family: "Italiana", serif;
+  margin: 0;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  font-size: 150px;
+  line-height: 0.7;
+  text-align: center;
+  flex: 1;
+  z-index: 1;
+  position: relative;
+  -webkit-text-stroke: 1px #111;
+  paint-order: stroke fill;
+  opacity: 0;
+  animation: fadeSlideUp 2s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.nakshatra__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 9999;
+  /* Removed animation & opacity */
+}
+
+
+.nakshatra__image-wrap {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #fff;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nakshatra__header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nakshatra__brand-logo {
+    position: relative;
+    margin-bottom: 20px;
+    height: 120px;
+  }
+  
+  .nakshatra__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1920px) {
+.nakshatra__image {
+    display: block;
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    z-index: 9999;
+}
+}
