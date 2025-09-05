@@ -1,0 +1,216 @@
+.viability-metrics {
+  background: url("images/blur_metrics.png") center / cover no-repeat;
+  /* Added fallback dark background color */
+  background-color: #1a202c;
+  padding: 80px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.viability-metrics::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+.metrics-container {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.metrics-title {
+  font-family: "Italiana", serif;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  /* Added text shadow for better contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  position: relative;
+}
+
+.metric-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.932);
+  border-radius: 80px;
+  padding: 35px 0px;
+  text-align: center;
+  position: relative;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.metric-icon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 24px;
+}
+
+.metric-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.metric-title {
+  font-family: "Italiana", serif;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.metric-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.metric-description {
+  font-family: "Jura";
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.metric-number {
+  font-family: "Jura";
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.metric-arrow {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  z-index: 2;
+  /* Added text shadow for better contrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .metric-card {
+    height: 260px;
+    padding: 30px 20px;
+    border-radius: 60px;
+  }
+
+  .metrics-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .metric-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .viability-metrics {
+    padding: 60px 15px;
+  }
+
+  .metric-card {
+    height: 240px;
+    border-radius: 50px;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metric-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.metric-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.metric-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.metric-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.metric-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.metric-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.metric-card:nth-child(6) {
+  animation-delay: 0.6s;
+}

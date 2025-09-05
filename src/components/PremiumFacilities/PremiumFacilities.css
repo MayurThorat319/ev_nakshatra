@@ -167,24 +167,65 @@
 
 
 .facility-tagline {
-  position: relative; /* needed for the overlay */
+  --color: #fff;  /* hover overlay color */
+  --color2: rgb(10, 25, 30); /* hover text color */
+  position: relative;
+  display: inline-block;
+  padding: 0.4em 0.8em;
   font-size: 14px;
   letter-spacing: 0.05em;
-  opacity: 0.8;
-  z-index: 1; /* keep text above overlay */
-  display: inline-block; /* ensures overlay fits tight */
-  padding: 0.4em 0.8em; /* some space inside */
+  opacity: 0.9;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+  cursor: pointer;
+  transition: .5s;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);          /* 🔹 default background */
+  border-radius: 20px;         /* rectangle with slightly rounded edges */
+}
+
+/* animated overlay layers */
+.facility-tagline::after,
+.facility-tagline::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: .5s ease-out;
+  background-color: var(--color);
+  border-radius: 6px; /* keep shape consistent */
 }
 
 .facility-tagline::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* cover entire text area */
-  border-radius: 999px; /* full circular pill shape */
-  background: rgba(0, 0, 0, 0.7); /* soft overlay (blue tint example) */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* subtle shadow */
-  z-index: -1; /* put behind the text */
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
 }
+
+/* hover animation */
+.facility-tagline:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.facility-tagline:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.facility-tagline:hover {
+  color: var(--color2);
+}
+
+.facility-tagline:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+}
+
 
 /* Responsive styles */
 @media (min-width: 768px) {
