@@ -1,8 +1,8 @@
-import { FaHandHoldingUsd, FaChartLine, FaEye } from "react-icons/fa"
-import "./ViabilityMetrics.css"
-import { ImLocation2 } from "react-icons/im"
-import { GiProfit } from "react-icons/gi"
-import { SiSyncthing } from "react-icons/si"
+import { FaHandHoldingUsd, FaChartLine, FaEye } from "react-icons/fa";
+import "./ViabilityMetrics.css";
+import { ImLocation2 } from "react-icons/im";
+import { GiProfit } from "react-icons/gi";
+import { SiSyncthing } from "react-icons/si";
 
 const ViabilityMetrics = () => {
   const metrics = [
@@ -11,44 +11,44 @@ const ViabilityMetrics = () => {
       icon: <ImLocation2 />,
       title: "LOCATION",
       subtitle: "RATING",
-      description: "In the spotlight of a fast-growing commercial corridor.",
+      description: "Positioned in a high-growth commercial zone.",
     },
     {
       id: "02",
       icon: <FaHandHoldingUsd />,
       title: "ROI",
       subtitle: "RATING",
-      description: "In the spotlight of a fast-growing commercial corridor.",
+      description: "Watch your investment work harder for you.",
     },
     {
       id: "03",
       icon: <GiProfit />,
       title: "RENTAL YIELD",
       subtitle: "RATING",
-      description: "In the spotlight of a fast-growing commercial corridor.",
+      description: "Earn more, effortlessly, with premium yields.",
     },
     {
       id: "04",
       icon: <FaChartLine />,
       title: "DEMAND",
       subtitle: "RATING",
-      description: "In the spotlight of a fast-growing commercial corridor.",
+      description: "Spaces here don’t stay empty for long.",
     },
     {
       id: "05",
       icon: <FaEye />,
       title: "VISIBILITY",
       subtitle: "RATING",
-      description: "In the spotlight of a fast-growing commercial corridor.",
+      description: "Be seen where it matters most.",
     },
     {
       id: "06",
       icon: <SiSyncthing />,
       title: "CONNECTION",
       subtitle: "RATING",
-      description: "In the spotlight of a fast-growing commercial corridor.",
+      description: "Plugged into everything  roads, rails, and results.",
     },
-  ]
+  ];
 
   return (
     <section className="viability-metrics">
@@ -57,7 +57,9 @@ const ViabilityMetrics = () => {
         <div className="metrics-grid">
           {metrics.map((metric, index) => (
             <div key={metric.id} className="metric-card">
-              <div className="metric-icon">{metric.icon}</div>
+              <div className="metric-wrapper">
+                <div className="metric-icon">{metric.icon}</div>
+              </div>
               <div className="metric-content">
                 <h3 className="metric-title">{metric.title}</h3>
                 {/* <p className="metric-subtitle">{metric.subtitle}</p> */}
@@ -70,7 +72,7 @@ const ViabilityMetrics = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ViabilityMetrics
+export default ViabilityMetrics;

@@ -71,7 +71,7 @@ const PremiumFacilities = () => {
         {/* Grand Arrival Lobby Section */}
         <div className="facility-section" ref={(el) => {sectionRefs.current[1] = el}}>
           <img
-            src="/images/lobby.jpg"
+            src="/images/lobby.png"
             alt="Grand arrival lobby"
             className="facility-image"
           />
@@ -102,7 +102,7 @@ const PremiumFacilities = () => {
         {/* Cafe Section */}
         <div className="facility-section" ref={(el) => {sectionRefs.current[2] = el}}>
           <img
-            src="/images/cafe.jpg"
+            src="/images/cafe.png"
             alt="Curated cafeteria"
             className="facility-image"
           />
@@ -133,7 +133,7 @@ const PremiumFacilities = () => {
         {/* Security Section */}
         <div className="facility-section" ref={(el) => {sectionRefs.current[3] = el}}>
           <img
-            src="/images/security.jpg"
+            src="/images/security.png"
             alt="Curated cafeteria"
             className="facility-image"
           />

@@ -27,7 +27,7 @@
 }
 
 /* Decorative small blue flourish near bottom-left on the front card */
-.cs-card--front::after {
+/* .cs-card--front::after {
   content: "";
   position: absolute;
   left: 18px;
@@ -39,7 +39,7 @@
   box-shadow: 0 3px 10px rgba(59, 130, 246, 0.4);
   opacity: 0.85;
   z-index: 3;
-}
+} */
 
 /* Back card peeks from the right */
 .cs-card--back {

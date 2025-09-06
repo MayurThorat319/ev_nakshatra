@@ -53,6 +53,8 @@
 /* Media container to the right on larger screens */
 .mw__media {
   width: 100%;
+  padding-bottom: 18px;
+  /* padding-top: 10px; */
 }
 
 /* Larger screens: side-by-side like the screenshot */
