@@ -1,4 +1,5 @@
 /* nakshatra-section.css */
+/* Removed Google Fonts @import statements and updated font references */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 
@@ -10,9 +11,11 @@
   display: flex;
   flex-direction: column;
   padding: 16px 16px 20px;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+  font-family:
+    var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+  overflow: hidden;
 }
 
 /* Header with logo aligned left and title centered */
@@ -24,25 +27,40 @@
   display: flex;
   align-items: center;
   justify-content: center; /* centers the title */
+  transition: all 1s ease-in;
+  height: 120px; /* Match logo height */
+}
+
+.nakshatra__header--collapse {
+  height: 0;
+  margin: 0 auto 8px;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .nakshatra__brand-logo {
   position: absolute;
   top: 0%;
   left: 1%;
-  height: 120px;   /* adjust to match screenshot */
+  height: 120px; /* adjust to match screenshot */
   width: auto;
   object-fit: contain;
   z-index: 2;
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
 
+.nakshatra__brand-logo--fade-out {
+  opacity: 0;
 }
 
 .nakshatra__title {
+  /* Updated font-family to use CSS variable */
   font-family: "Italiana", serif;
   margin: 0;
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  font-size: 150px;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  font-size: 90px;
   line-height: 0.7;
   text-align: center;
   flex: 1;
@@ -51,7 +69,7 @@
   -webkit-text-stroke: 1px #111;
   paint-order: stroke fill;
   opacity: 0;
-  animation: fadeSlideUp 2s ease-out forwards;
+  transform: translateY(80px);
 }
 
 @keyframes fadeSlideUp {
@@ -65,11 +83,45 @@
   }
 }
 
+@keyframes fadeSlideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+}
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Title animation classes */
+.nakshatra__title--slide-up {
+  animation: fadeSlideUp 1.5s ease-out forwards;
+}
+
+.nakshatra__title--slide-down {
+  animation: fadeSlideDown 1s ease-in forwards;
+}
+
+/* Updated label animation to come from above */
+@keyframes labelSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nakshatra__image {
@@ -77,10 +129,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 9999;
-  /* Removed animation & opacity */
+  z-index: 1;
 }
-
 
 .nakshatra__image-wrap {
   max-width: 100%;
@@ -92,6 +142,93 @@
   min-height: 0;
   display: flex;
   overflow: hidden;
+  position: relative;
+  transition: all 1s ease-in;
+}
+
+.nakshatra__image-wrap--expand {
+  flex: 1 0 100%; /* Take up all available space */
+  min-height: calc(100vh - 40px); /* Account for padding */
+}
+
+/* Added styles for animated labels */
+.nakshatra__labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.nakshatra__label {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Transparent left border */
+  border-left: 3px solid transparent;
+
+  opacity: 0;
+  /* Updated to use slide-in animation */
+  animation: labelSlideIn 0.6s ease-out forwards;
+  animation-delay: 5s;
+}
+
+/* New nakshatra label style */
+.nakshatra__label--nakshatra {
+  top: 0%;
+  right: 40%;
+  animation-delay: 5.5s;
+  font-family: "Jura";
+  border-top: 2px solid rgba(255, 255, 255, 0.884);
+  border-left: 2px solid rgba(255, 255, 255, 0.884);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.884);
+  border-right: 2px solid transparent;
+  letter-spacing: 8px;
+  font-size: 16px;
+}
+
+/* Positioned labels to match the screenshot */
+.nakshatra__label--elite {
+  top: 45%;
+  left: -1%;
+  animation-delay: 6s;
+  font-family: "Jura";
+  border-top: 2px solid rgba(255, 255, 255, 0.884);
+  border-right: 2px solid rgba(255, 255, 255, 0.884);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.884);
+  border-left: 2px solid transparent;
+  letter-spacing: 8px;
+}
+
+.nakshatra__label--edge {
+  top: 25%;
+  right: -1%;
+  animation-delay: 6.3s;
+  font-family: "Jura";
+  border-top: 2px solid rgba(255, 255, 255, 0.884);
+  border-left: 2px solid rgba(255, 255, 255, 0.884);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.884);
+  border-right: 2px solid transparent;
+  letter-spacing: 8px;
+}
+
+.nakshatra__label--epicenter {
+  bottom: -1%;
+  left: 45%;
+  transform: translateX(-50%);
+  animation-delay: 6.6s;
+  font-family: "Jura";
+  letter-spacing: 8px;
 }
 
 /* Responsive adjustments */
@@ -99,25 +236,58 @@
   .nakshatra__header {
     flex-direction: column;
     text-align: center;
+    height: auto;
+    min-height: 140px;
   }
-  
+
+  .nakshatra__header--collapse {
+    height: 0;
+    min-height: 0;
+  }
+
   .nakshatra__brand-logo {
     position: relative;
     margin-bottom: 20px;
     height: 120px;
   }
-  
+
   .nakshatra__title {
     font-size: 2.5rem;
+  }
+
+  /* Responsive label adjustments */
+  .nakshatra__label {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .nakshatra__label--nakshatra {
+    top: 10%;
+    right: 8%;
+    font-size: 14px;
+  }
+
+  .nakshatra__label--elite {
+    top: 12%;
+    left: 5%;
+  }
+
+  .nakshatra__label--edge {
+    top: 20%;
+    right: 8%;
+  }
+
+  .nakshatra__label--epicenter {
+    bottom: 30%;
   }
 }
 
 @media (max-width: 1920px) {
-.nakshatra__image {
+  .nakshatra__image {
     display: block;
     width: 100%;
-    height: 85vh;
+    height: 100%;
     object-fit: cover;
-    z-index: 9999;
-}
+    z-index: 1;
+  }
 }

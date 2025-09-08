@@ -8,42 +8,42 @@ const ViabilityMetrics = () => {
   const metrics = [
     {
       id: "01",
-      icon: <ImLocation2 />,
+      icon: <ImLocation2 color="#fff" />,
       title: "LOCATION",
       subtitle: "RATING",
       description: "Positioned in a high-growth commercial zone.",
     },
     {
       id: "02",
-      icon: <FaHandHoldingUsd />,
+      icon: <FaHandHoldingUsd color="#fff" />,
       title: "ROI",
       subtitle: "RATING",
       description: "Watch your investment work harder for you.",
     },
     {
       id: "03",
-      icon: <GiProfit />,
+      icon: <GiProfit color="#fff" />,
       title: "RENTAL YIELD",
       subtitle: "RATING",
       description: "Earn more, effortlessly, with premium yields.",
     },
     {
       id: "04",
-      icon: <FaChartLine />,
+      icon: <FaChartLine color="#fff" />,
       title: "DEMAND",
       subtitle: "RATING",
       description: "Spaces here don’t stay empty for long.",
     },
     {
       id: "05",
-      icon: <FaEye />,
+      icon: <FaEye color="#fff" />,
       title: "VISIBILITY",
       subtitle: "RATING",
       description: "Be seen where it matters most.",
     },
     {
       id: "06",
-      icon: <SiSyncthing />,
+      icon: <SiSyncthing color="#fff" />,
       title: "CONNECTION",
       subtitle: "RATING",
       description: "Plugged into everything  roads, rails, and results.",
@@ -51,7 +51,7 @@ const ViabilityMetrics = () => {
   ];
 
   return (
-    <section className="viability-metrics">
+    <section className="viability-metrics" id="viability">
       <div className="metrics-container">
         <h2 className="metrics-title">Viability Metrics</h2>
         <div className="metrics-grid">

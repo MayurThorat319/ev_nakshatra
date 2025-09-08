@@ -1,201 +1,109 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import NakshatraSection from './components/NakshatraSection'
-import ModernWorkspace from './components/Modernworkspace/ModernWorkspace'
-import PremiumFacilities from './components/PremiumFacilities/PremiumFacilities'
-import { TestimonialsSection } from './components/TestimonialsSection/TestimonialsSection'
-import ViabilityMetrics from './components/ViabilityMetrics/ViabilityMetrics'
-import ContactSection from './components/ContactSection/ContactSection'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import NakshatraSection from "./components/NakshatraSection";
+import ModernWorkspace from "./components/Modernworkspace/ModernWorkspace";
+import PremiumFacilities from "./components/PremiumFacilities/PremiumFacilities";
+import { TestimonialsSection } from "./components/TestimonialsSection/TestimonialsSection";
+import ViabilityMetrics from "./components/ViabilityMetrics/ViabilityMetrics";
+import ContactSection from "./components/ContactSection/ContactSection";
+import NakshatraNavbar from "./components/NavBar/NavBar";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-   <div>
+    <div>
+       <NakshatraNavbar />
       <NakshatraSection />
-       <ModernWorkspace />
-       <ViabilityMetrics />
-         <PremiumFacilities />
-         <TestimonialsSection />
-         <ContactSection />
-          <footer
-          className="animate-fade-up"
-          id="contact"
+      <ModernWorkspace />
+      <ViabilityMetrics />
+      <PremiumFacilities />
+      <TestimonialsSection />
+      <ContactSection />
+      <footer
+        className="animate-fade-up"
+        id="contact"
+        style={{
+          backgroundColor: "#273B6791",
+          color: "#ffffff",
+          padding: "60px 20px 40px",
+          marginTop: "60px",
+        }}
+      >
+        <div
           style={{
-            backgroundColor: "#273B6791",
-            color: "#ffffff",
-            padding: "60px 20px 40px",
-            marginTop: "60px",
+            maxWidth: "1200px",
+            margin: "0 auto",
           }}
         >
+          {/* Header with logo and social icons */}
           <div
+            className="footer-grid"
             style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+              gap: "40px",
+              marginBottom: "40px",
             }}
           >
-            {/* Header with logo and social icons */}
-            <div
-              className="footer-grid"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
-                gap: "40px",
-                marginBottom: "40px",
-              }}
-            >
-              <div
+            <div style={{ textAlign: "start" }}>
+              <img
+                src="images/ev_logo.png"
+                alt="EV Homes Logo"
                 style={{
-                  fontSize: "1.8rem",
-                  fontWeight: "bold",
+                  height: "50px", // adjust size as needed
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Main footer content */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+              gap: "40px",
+              marginBottom: "40px",
+            }}
+          >
+            {/* Subscribe Section */}
+
+            {/* Discover Section */}
+
+            {/* Quick Links Section */}
+            <div>
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "600",
+                  marginBottom: "20px",
                   color: "#ffffff",
                 }}
               >
-                EV HOMES
-              </div>
-             
-            </div>
-
-            {/* Main footer content */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
-                gap: "40px",
-                marginBottom: "40px",
-              }}
-            >
-              {/* Subscribe Section */}
-
-              
-
-              {/* Discover Section */}
-             
-
-              {/* Quick Links Section */}
-              <div>
-                <h3
+                Quick Links
+              </h3>
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: "0",
+                  margin: "0",
+                }}
+              >
+                <li
+                  key="About"
                   style={{
-                    fontSize: "1.1rem",
-                    fontWeight: "600",
-                    marginBottom: "20px",
-                    color: "#ffffff",
-                  }}
-                >
-                  Quick Links
-                </h3>
-                <ul
-                  style={{
-                    listStyle: "none",
-                    padding: "0",
-                    margin: "0",
-                  }}
-                >
-                  <li
-                    key="About"
-                    style={{
-                      marginBottom: "8px",
-                    }}
-                  >
-                    <a
-                      href="#about"
-                      style={{
-                        color: "#ccc",
-                        textDecoration: "none",
-                        fontSize: "0.9rem",
-                        transition: "color 0.3s ease",
-                      }}
-                      onMouseOver={(e) =>
-                        (e.currentTarget.style.color = "#003261")
-                      }
-                      onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li
-                    key="Contact"
-                    style={{
-                      marginBottom: "8px",
-                    }}
-                  >
-                    <a
-                      href="#contact"
-                      style={{
-                        color: "#ccc",
-                        textDecoration: "none",
-                        fontSize: "0.9rem",
-                        transition: "color 0.3s ease",
-                      }}
-                      onMouseOver={(e) =>
-                        (e.currentTarget.style.color = "#003261")
-                      }
-                      onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
-                    >
-                      Contact
-                    </a>
-                  </li>
-                  {["FAQ's", "Privacy Policy", "Terms & Conditions"].map(
-                    (item) => (
-                      <li
-                        key={item}
-                        style={{
-                          marginBottom: "8px",
-                        }}
-                      >
-                        <a
-                          style={{
-                            color: "#ccc",
-                            textDecoration: "none",
-                            fontSize: "0.9rem",
-                            transition: "color 0.3s ease",
-                          }}
-                          onMouseOver={(e) =>
-                            (e.currentTarget.style.color = "#003261")
-                          }
-                          onMouseOut={(e) =>
-                            (e.currentTarget.style.color = "#ccc")
-                          }
-                        >
-                          {item}
-                        </a>
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
-
-              {/* Contact Us Section */}
-              <div>
-                <h3
-                  style={{
-                    fontSize: "1.1rem",
-                    fontWeight: "600",
-                    marginBottom: "20px",
-                    color: "#ffffff",
-                  }}
-                >
-                  Contact Us
-                </h3>
-                <div
-                  style={{
-                    fontSize: "0.9rem",
-                    color: "#ccc",
-                    lineHeight: "1.6",
+                    marginBottom: "8px",
                   }}
                 >
                   <a
-                    href="https://evgroup.in/profile.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#about"
                     style={{
                       color: "#ccc",
                       textDecoration: "none",
                       fontSize: "0.9rem",
-                      display: "block",
-                      marginBottom: "8px",
                       transition: "color 0.3s ease",
                     }}
                     onMouseOver={(e) =>
@@ -203,19 +111,21 @@ function App() {
                     }
                     onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
                   >
-                    www.evgroup.in
+                    About
                   </a>
-
+                </li>
+                <li
+                  key="Contact"
+                  style={{
+                    marginBottom: "8px",
+                  }}
+                >
                   <a
-                    href="https://wa.me/919867456777"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#contact"
                     style={{
                       color: "#ccc",
                       textDecoration: "none",
                       fontSize: "0.9rem",
-                      display: "block",
-                      marginBottom: "8px",
                       transition: "color 0.3s ease",
                     }}
                     onMouseOver={(e) =>
@@ -223,109 +133,203 @@ function App() {
                     }
                     onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
                   >
-                    +91 82916 68777
+                    Contact
                   </a>
-                </div>
-              </div>
-
-              {/* Our Address Section */}
-              <div>
-                <h3
-                  style={{
-                    fontSize: "1.1rem",
-                    fontWeight: "600",
-                    marginBottom: "20px",
-                    color: "#ffffff",
-                  }}
-                >
-                  Our Address
-                </h3>
-                <div
-                  style={{
-                    fontSize: "0.9rem",
-                    color: "#ccc",
-                    lineHeight: "1.6",
-                  }}
-                >
-                  <p>
-                    212 A wing Vrindavan,
-                    <br />
-                    Chambers Above Axis Bank,
-                    <br />
-                    sector-17, Vashi Navi
-                    <br />
-                    Mumbai
-                  </p>
-                </div>
-              </div>
-
-              {/* Get the app Section */}
-              <div>
-                <h3
-                  style={{
-                    fontSize: "1.1rem",
-                    fontWeight: "600",
-                    marginBottom: "20px",
-                    color: "white",
-                  }}
-                >
-                  Get the app
-                </h3>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "10px",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      backgroundColor: "#333",
-                      padding: "8px 12px",
-                      borderRadius: "6px",
-                      cursor: "pointer",
-                      transition: "background-color 0.3s ease",
-                    }}
-                    onClick={() => {
-                      window.open(
-                        "https://play.google.com/store/apps/details?id=com.evhomes.ev_homes&hl=en",
-                        "_blank"
-                      );
-                    }}
-                    onMouseOver={(e) =>
-                      (e.currentTarget.style.backgroundColor = "#444")
-                    }
-                    onMouseOut={(e) =>
-                      (e.currentTarget.style.backgroundColor = "#333")
-                    }
-                  >
-                    <span style={{ marginRight: "8px", fontSize: "1.2rem" }}>
-                      ▶️
-                    </span>
-                    <div>
-                      <div style={{ fontSize: "0.7rem", color: "#aaa" }}>
-                        Get it on
-                      </div>
-                      <div
+                </li>
+                {["FAQ's", "Privacy Policy", "Terms & Conditions"].map(
+                  (item) => (
+                    <li
+                      key={item}
+                      style={{
+                        marginBottom: "8px",
+                      }}
+                    >
+                      <a
                         style={{
+                          color: "#ccc",
+                          textDecoration: "none",
                           fontSize: "0.9rem",
-                          fontWeight: "600",
-                          color: "white",
+                          transition: "color 0.3s ease",
                         }}
+                        onMouseOver={(e) =>
+                          (e.currentTarget.style.color = "#003261")
+                        }
+                        onMouseOut={(e) =>
+                          (e.currentTarget.style.color = "#ccc")
+                        }
                       >
-                        Google Play
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                        {item}
+                      </a>
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+
+            {/* Contact Us Section */}
+            <div>
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "600",
+                  marginBottom: "20px",
+                  color: "#ffffff",
+                }}
+              >
+                Contact Us
+              </h3>
+              <div
+                style={{
+                  fontSize: "0.9rem",
+                  color: "#ccc",
+                  lineHeight: "1.6",
+                }}
+              >
+                <a
+                  href="https://evgroup.in/profile.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#ccc",
+                    textDecoration: "none",
+                    fontSize: "0.9rem",
+                    display: "block",
+                    marginBottom: "8px",
+                    transition: "color 0.3s ease",
+                  }}
+                  onMouseOver={(e) => (e.currentTarget.style.color = "#003261")}
+                  onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
+                >
+                  www.evgroup.in
+                </a>
+
+                <a
+                  href="https://wa.me/919867456777"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#ccc",
+                    textDecoration: "none",
+                    fontSize: "0.9rem",
+                    display: "block",
+                    marginBottom: "8px",
+                    transition: "color 0.3s ease",
+                  }}
+                  onMouseOver={(e) => (e.currentTarget.style.color = "#003261")}
+                  onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
+                >
+                  +91 82916 68777
+                </a>
               </div>
             </div>
-          </div>
-        </footer>
+
+            {/* Our Address Section */}
+            <div>
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "600",
+                  marginBottom: "20px",
+                  color: "#ffffff",
+                }}
+              >
+                Our Address
+              </h3>
+              <div
+                style={{
+                  fontSize: "0.9rem",
+                  color: "#ccc",
+                  lineHeight: "1.6",
+                }}
+              >
+                <p>
+                  212 A wing Vrindavan,
+                  <br />
+                  Chambers Above Axis Bank,
+                  <br />
+                  sector-17, Vashi Navi
+                  <br />
+                  Mumbai
+                </p>
+              </div>
+            </div>
+
+            {/* Get the app Section */}
+          <div>
+  <h3
+    style={{
+      fontSize: "1.1rem",
+      fontWeight: "600",
+      marginBottom: "20px",
+      color: "white",
+    }}
+  >
+    Get the app
+  </h3>
+
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "12px",
+    }}
+  >
+    {/* Google Play Button */}
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        background: "linear-gradient(90deg, #2c2c2c, #1e1e1e)",
+        padding: "10px 14px",
+        borderRadius: "10px",
+        cursor: "pointer",
+        boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+      }}
+      onClick={() => {
+        window.open(
+          "https://play.google.com/store/apps/details?id=com.evhomes.ev_homes&hl=en",
+          "_blank"
+        );
+      }}
+      onMouseOver={(e) => {
+        e.currentTarget.style.transform = "translateY(-3px)";
+        e.currentTarget.style.boxShadow = "0 6px 14px rgba(0,0,0,0.5)";
+      }}
+      onMouseOut={(e) => {
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
+      }}
+    >
+      {/* Google Play Icon */}
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+        alt="Google Play"
+        style={{ height: "40px", marginRight: "12px" }}
+      />
+
+      {/* Text */}
+      <div>
+        <div style={{ fontSize: "0.75rem", color: "#bbb" }}>GET IT ON</div>
+        <div
+          style={{
+            fontSize: "1rem",
+            fontWeight: "600",
+            color: "white",
+          }}
+        >
+          Google Play
+        </div>
+      </div>
     </div>
-  )
+  </div>
+</div>
+
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;

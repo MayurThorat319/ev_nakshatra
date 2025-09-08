@@ -276,7 +276,7 @@ export function TestimonialsSection({
   direction = "up",
 }: TestimonialsSectionProps) {
   return (
-    <section className="testimonials-section">
+    <section className="testimonials-section" id="feedback">
       <div className="testimonials-container">
         <div className="testimonials-content">
           <div className="testimonials-header">

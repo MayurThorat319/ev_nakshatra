@@ -30,7 +30,7 @@ const PremiumFacilities = () => {
     return () => observer.disconnect()
   }, [])
   return (
-    <div className="premium-facilities">
+    <div className="premium-facilities" id="facilities">
       {/* Premium Facilities Header */}
       <div className="premium-facilities-header">
         <h2 className="premium-facilities-title">Premium Facilities</h2>

@@ -6,23 +6,23 @@ import CarouselStack from "../CarouselStack/CarouselStack"
 
 const images: CarouselImage[] = [
   {
-    src: "/images/Infinity_pool.jpeg",  // file in public/images/rooftop.png
+    src: "/images/modern_1.png",  // file in public/images/rooftop.png
     alt: "Rooftop lounge at sunset with city views and fireworks in the sky",
   },
   {
-    src: "/images/jogging_track.jpeg",   // file in public/images/office.png
+    src: "/images/modern_2.png",   // file in public/images/office.png
     alt: "Open modern office with large windows and desks",
   },
-  {
-    src: "/images/Kids_play_area.jpeg",  // file in public/images/skyline.png
-    alt: "Evening skyline with illuminated towers and glass facades",
-  },
+  // {
+  //   src: "/images/Kids_play_area.jpeg",  // file in public/images/skyline.png
+  //   alt: "Evening skyline with illuminated towers and glass facades",
+  // },
 ]
 
 
 const ModernWorkspaceSection: React.FC = () => {
   return (
-    <section className="mw" aria-labelledby="mw-title">
+    <section className="mw" aria-labelledby="mw-title" id="about">
       <div className="mw__inner">
         <div className="mw__copy">
           <h2 id="mw-title" className="mw__title">
