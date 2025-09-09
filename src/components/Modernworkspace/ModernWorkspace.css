@@ -11,6 +11,16 @@
   margin: 0 auto;
 }
 
+.mw__text_mob {
+  font-family: "Jura";
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #6b7280;
+  letter-spacing: 10%;
+  display: none;
+}
+
 .mw__inner {
   
   margin: 0 auto;
@@ -141,4 +151,59 @@
   .mw__media { 
        padding-right: 40px;
   } */
+}
+
+
+@media (max-width: 615px) {
+  html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+.mw__inner {
+  
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 3vw;
+}
+
+.mw__title {
+  font-family: "Italiana", serif;
+  font-weight: 400;
+  -webkit-text-stroke: 1px ;
+  letter-spacing: 2.5px;
+  line-height: 100%;
+  font-size: 8vw;
+  margin: 10px 0 5px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.mw__text {
+  font-family: "Jura";
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #6b7280;
+  letter-spacing: 10%;
+  text-align: left;
+  display: none;
+}
+
+.mw__text_mob {
+  font-family: "Jura";
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #6b7280;
+  letter-spacing: 10%;
+display: flex;
+flex-direction: column;
+  
+}
+.cs-card--back {
+    display: none;
+  }
 }

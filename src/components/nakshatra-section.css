@@ -148,7 +148,7 @@
 
 .nakshatra__image-wrap--expand {
   flex: 1 0 100%; /* Take up all available space */
-  min-height: calc(100vh - 40px); /* Account for padding */
+  min-height: calc(100vh -40px); /* Account for padding */
 }
 
 /* Added styles for animated labels */
@@ -290,4 +290,10 @@
     object-fit: cover;
     z-index: 1;
   }
+}
+
+@media (max-width: 615px) {
+.nakshatra__labels {
+display: none;
+}
 }

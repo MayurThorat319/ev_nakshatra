@@ -73,7 +73,7 @@
   place-items: center;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-  transition: all 200ms ease;
+  transition: all 100ms ease;
   font-weight: bold;
   font-size: 22px;
 }
@@ -157,4 +157,36 @@
     object-fit: cover;
     border-radius: 24px;
   }
+
+}
+
+@media (max-width: 615px) {
+.cs {
+  position: relative;
+  width: 100%;
+  /* Increased height for large screens */
+  height: 300px;
+  margin-right: 20px;
+  left: 2%;
+}
+
+.cs-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+.cs-card--back {
+  z-index: 1;
+  /* transform: translateX(40px) scale(0.94); */
+  opacity: 0.9;
+  filter: blur(0.8px);
+  pointer-events: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.cs-card--front {
+  z-index: 2;
+  width: 100%;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.15);
+}
 }

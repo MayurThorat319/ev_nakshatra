@@ -10,6 +10,19 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Added smooth transition for visibility changes */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Added visibility states for scroll-based showing/hiding */
+.NavMain.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.NavMain.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* Cyber link styles */
@@ -33,7 +46,7 @@
 }
 
 .cyberLink:hover {
-    color: #ffffff;
+  color: #ffffff;
   text-shadow: 0 0 10px rgba(243, 236, 211, 0.8);
   letter-spacing: 2px;
 }
@@ -93,7 +106,6 @@
   transform: translateX(-50%) translateY(-6px);
 }
 
-
 .NavContainer {
   display: flex;
   flex-direction: row;
@@ -122,7 +134,7 @@
 
 .Logo {
   height: clamp(32px, 4vw, 50px);
-  width: clamp(32px, 4vw, 50px);
+  width: clamp(32px, 4vw, 60px);
   border-radius: 50%;
   object-fit: cover;
   transition: all 0.3s ease;
@@ -186,10 +198,6 @@
   background: rgba(255, 255, 255, 0.1);
   color: #e0bc67;
 }
-
-
-
-
 
 /* Improved responsive design with better breakpoints */
 @media (max-width: 1024px) {
@@ -256,7 +264,7 @@
   }
 
   .navLink:hover {
-    background:  0 0 12px rgba(255, 215, 0, 0.6); /* gold glow */
+    background: rgba(255, 215, 0, 0.6); /* gold glow */
     transform: none;
   }
 

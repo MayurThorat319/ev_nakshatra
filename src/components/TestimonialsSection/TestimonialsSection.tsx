@@ -23,15 +23,15 @@ const defaultTestimonials: Testimonial[] = [
   {
     id: 1,
     name: "THE KAMAT'S",
-    text: "The world-class amenities truly bring comfort and luxury to everyday living, making life easier and more enjoyable.",
-    rating: 4,
+    text: "The world-class amenities truly bring comfort and luxury to everyday living.",
+    rating: 5,
     avatar: "images/kamat.png",
   },
   {
     id: 2,
     name: "THE BAFNA'S",
     text: "The location is prime, saving both time and travel hassle for daily needs.",
-    rating: 4,
+    rating: 5,
     avatar: "images/bafnas.jpg",
   },
   {
@@ -45,7 +45,7 @@ const defaultTestimonials: Testimonial[] = [
     id: 4,
     name: "THE KINGSLEY'S",
     text: "You can rely on them for honesty and on-time work.",
-    rating: 4,
+    rating: 5,
     avatar: "images/kingsley.jpeg",
   },
   {
@@ -69,7 +69,7 @@ const defaultSecondSliderTestimonials: Testimonial[] = [
     id: 2,
     name: "THE PEDNEKAR'S",
     text: "Construction is happening very quickly in Vashi than expected.",
-    rating: 4,
+    rating: 5,
     avatar: "images/pednekars.png",
   },
   {
@@ -83,7 +83,7 @@ const defaultSecondSliderTestimonials: Testimonial[] = [
     id: 4,
     name: "THE THAKUR'S",
     text: "The Marina Bay theme is superb and makes the place look very special.",
-    rating: 4,
+    rating: 5,
     avatar: "images/thakurs.png",
   },
   {
@@ -100,7 +100,7 @@ const defaultThirdSliderTestimonials: Testimonial[] = [
     id: 1,
     name: "THE RAJMOHAN'S",
     text: "The commercial spaces are vastu-designed and were handed over right on time.",
-    rating: 4,
+    rating: 5,
     avatar: "images/rajmohan.png",
   },
   {
@@ -121,7 +121,7 @@ const defaultThirdSliderTestimonials: Testimonial[] = [
     id: 4,
     name: "THE DESAI'S",
     text: "Got possession on time with good construction quality, which gave us peace of mind.",
-    rating: 4,
+    rating: 5,
     avatar: "images/desai.jpg",
   },
   {

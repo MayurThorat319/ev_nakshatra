@@ -255,7 +255,8 @@ function App() {
             </div>
 
             {/* Get the app Section */}
-          <div>
+          {/* Get the app Section */}
+<div>
   <h3
     style={{
       fontSize: "1.1rem",
@@ -279,12 +280,16 @@ function App() {
       style={{
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
         background: "linear-gradient(90deg, #2c2c2c, #1e1e1e)",
         padding: "10px 14px",
         borderRadius: "10px",
         cursor: "pointer",
         boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
         transition: "transform 0.2s ease, box-shadow 0.2s ease",
+        maxWidth: "220px", // keeps button compact
+        width: "80%", // responsive width
+        margin: "0 auto", // center on mobile
       }}
       onClick={() => {
         window.open(
@@ -301,29 +306,20 @@ function App() {
         e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
       }}
     >
-      {/* Google Play Icon */}
+      {/* Google Play Badge */}
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
         alt="Google Play"
-        style={{ height: "40px", marginRight: "12px" }}
+        style={{
+          width: "100%",
+          height: "auto",
+          maxWidth: "180px", // keeps it proportional
+        }}
       />
-
-      {/* Text */}
-      <div>
-        <div style={{ fontSize: "0.75rem", color: "#bbb" }}>GET IT ON</div>
-        <div
-          style={{
-            fontSize: "1rem",
-            fontWeight: "600",
-            color: "white",
-          }}
-        >
-          Google Play
-        </div>
-      </div>
     </div>
   </div>
 </div>
+
 
           </div>
         </div>

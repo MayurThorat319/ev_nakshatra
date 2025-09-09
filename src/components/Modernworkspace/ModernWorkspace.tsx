@@ -1,24 +1,23 @@
-import React from "react"
+import React from "react";
 
-import "./ModernWorkspace.css"
-import type { CarouselImage } from "../CarouselStack/CarouselStack"
-import CarouselStack from "../CarouselStack/CarouselStack"
+import "./ModernWorkspace.css";
+import type { CarouselImage } from "../CarouselStack/CarouselStack";
+import CarouselStack from "../CarouselStack/CarouselStack";
 
 const images: CarouselImage[] = [
   {
-    src: "/images/modern_1.png",  // file in public/images/rooftop.png
+    src: "/images/modern_1.png", // file in public/images/rooftop.png
     alt: "Rooftop lounge at sunset with city views and fireworks in the sky",
   },
   {
-    src: "/images/modern_2.png",   // file in public/images/office.png
+    src: "/images/modern_2.png", // file in public/images/office.png
     alt: "Open modern office with large windows and desks",
   },
-  // {
-  //   src: "/images/Kids_play_area.jpeg",  // file in public/images/skyline.png
-  //   alt: "Evening skyline with illuminated towers and glass facades",
-  // },
-]
-
+  {
+    src: "/images/Kids_play_area.jpeg",  // file in public/images/skyline.png
+    alt: "Evening skyline with illuminated towers and glass facades",
+  },
+];
 
 const ModernWorkspaceSection: React.FC = () => {
   return (
@@ -26,11 +25,11 @@ const ModernWorkspaceSection: React.FC = () => {
       <div className="mw__inner">
         <div className="mw__copy">
           <h2 id="mw-title" className="mw__title">
-            The <span style={{color: 
+           <p>The<span style={{color: 
               '#1E576C'
-            }}>Modern</span>
-            <br />
-            Workspace
+            }}> Modern </span>Workspace </p>
+            {/* <br /> */}
+            
           </h2>
 
           <p className="mw__text">
@@ -38,13 +37,22 @@ const ModernWorkspaceSection: React.FC = () => {
             crafted for visionaries, leaders, and creators ready to turn
             ambition into action. Elegant layouts, curated amenities, and
             flexible design — all in one place. Whether you’re scaling up or
-            settling in, this is
-            {" "}
-            <br />
+            settling in, this is <br />
             <a href="#" className="">
-              <span style={{color: 
-              '#1E576C'
-            }}>where your next chapter begins.</span>
+              <span style={{ color: "#1E576C" }}>
+                where your next chapter begins.
+              </span>
+            </a>
+          </p>
+
+          <p className="mw__text_mob">
+            Great ideas deserve striking environments. At NAKSHATRA, every inch
+            is thoughtfully designed. Whether you're scaling up or settling in,
+            this is <br />
+            <a href="#" className="">
+              <span style={{ color: "#1E576C" }}>
+                where your next chapter begins.
+              </span>
             </a>
           </p>
         </div>
@@ -54,7 +62,7 @@ const ModernWorkspaceSection: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ModernWorkspaceSection
+export default ModernWorkspaceSection;

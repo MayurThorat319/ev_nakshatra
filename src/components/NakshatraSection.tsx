@@ -10,6 +10,10 @@ const NakshatraSection: React.FC = () => {
   const [imageWrapAnimation, setImageWrapAnimation] = useState("")
 
   useEffect(() => {
+      if (typeof window !== "undefined") {
+    window.history.scrollRestoration = "manual"
+    window.scrollTo(0, 0)
+  }
     // After 1 second, add the slide up animation class to the title
     const timer1 = setTimeout(() => {
       setTitleAnimation("nakshatra__title--slide-up")
