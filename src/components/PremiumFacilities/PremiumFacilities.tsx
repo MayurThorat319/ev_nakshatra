@@ -52,7 +52,7 @@ const PremiumFacilities = () => {
             <p className="facility-heading">
               <span className="heading-text">
                 <span className="text-original">PARKING ZONE</span>
-                <span className="text-hover">PARKING ZONE</span>
+                <span className={`${"text-hover"} ${"text-animaated"} `} >PARKING ZONE</span>
               </span>
             </p>
             <div className="facility-divider loader"></div>
@@ -83,7 +83,7 @@ const PremiumFacilities = () => {
             <p className="facility-heading">
               <span className="heading-text">
                 <span className="text-original">GRAND ARRIVAL LOBBY</span>
-                <span className="text-hover">GRAND ARRIVAL LOBBY</span>
+                <span className={`${"text-hover"} ${"text-animaated"} `}>GRAND ARRIVAL LOBBY</span>
               </span>
             </p>
             <div className="facility-divider loader"></div>
@@ -114,7 +114,7 @@ const PremiumFacilities = () => {
             <p className="facility-heading">
               <span className="heading-text">
                 <span className="text-original">CURATED CAFETERIA</span>
-                <span className="text-hover">CURATED CAFETERIA</span>
+                <span className={`${"text-hover"} ${"text-animaated"} `}>CURATED CAFETERIA</span>
               </span>
             </p>
             <div className="facility-divider loader"></div>
@@ -145,7 +145,7 @@ const PremiumFacilities = () => {
             <p className="facility-heading">
              <span className="heading-text">
                 <span className="text-original">24/7 SECURITY</span>
-                <span className="text-hover">24/7 SECURITY</span>
+                <span className={`${"text-hover"} ${"text-animaated"} `}>24/7 SECURITY</span>
               </span>
             </p>
             <div className="facility-divider loader"></div>
@@ -174,7 +174,7 @@ const PremiumFacilities = () => {
             <p className="facility-heading">
               <span className="heading-text">
                 <span className="text-original">MEDICAL ACCESS LIFT</span>
-                <span className="text-hover">MEDICAL ACCESS LIFT</span>
+                <span className={`${"text-hover"} ${"text-animaated"} `}>MEDICAL ACCESS LIFT</span>
               </span>
             </p>
             <div className="facility-divider loader"></div>
