@@ -249,7 +249,11 @@
 
 @media (max-width: 480px) {
   .testimonials-section {
-    padding: 2rem 1rem;
+    padding: 0rem 1rem;
+  }
+
+  .testimonials-section {
+    min-height: 70vh;
   }
 
   .testimonials-title {
@@ -265,8 +269,11 @@
     padding: 1.25rem;
   }
 }
-@media screen and (max-width:615px){
-  .testimonials-description{
+@media screen and (max-width: 615px) {
+  .testimonials-section {
+    min-height: 70vh;
+  }
+  .testimonials-description {
     display: none;
   }
   .testimonials-sliders-wrapper {
@@ -275,58 +282,58 @@
     width: 50%;
     gap: 1rem;
   }
-  .third-slider{
+  .third-slider {
     display: none;
   }
   .testimonial-card {
-  max-width: 35vw;
-  height: fit-content;
-  margin: 0 auto;
-}
-.star-rating {
-  display: flex;
-  gap: 2px;
-  margin-bottom: 1rem;
-}
+    max-width: 35vw;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  .star-rating {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 1rem;
+  }
 
-.star {
-  color: #d1d5db;
-  font-size: 3vw;
-  transition: color 0.2s ease;
-}
+  .star {
+    color: #d1d5db;
+    font-size: 3vw;
+    transition: color 0.2s ease;
+  }
 
-.star.filled {
-  color: #fbbf24;
-}
+  .star.filled {
+    color: #fbbf24;
+  }
 
-.testimonial-text {
-  font-size: 4vw;
-  color: #374151;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-}
+  .testimonial-text {
+    font-size: 4vw;
+    color: #374151;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+  }
 
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-.author-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #e5e7eb;
-}
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e5e7eb;
+  }
 
-.author-name {
-  font-size: 4vw;
-  font-family: "Jura";
-  font-weight: 600;
-  color: #1f2937;
-}
+  .author-name {
+    font-size: 4vw;
+    font-family: "Jura";
+    font-weight: 600;
+    color: #1f2937;
+  }
 }

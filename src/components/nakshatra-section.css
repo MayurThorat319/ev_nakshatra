@@ -293,6 +293,9 @@
 }
 
 @media (max-width: 615px) {
+      .nakshatra__image {
+      
+      }
 .nakshatra__labels {
 display: none;
 }
