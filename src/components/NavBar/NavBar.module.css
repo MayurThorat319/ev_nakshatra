@@ -116,6 +116,8 @@
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+   box-sizing: border-box; /* important to stop padding adding extra width */
+  overflow-x: hidden; 
 }
 
 .leftSide {
@@ -198,6 +200,7 @@
   background: rgba(255, 255, 255, 0.1);
   color: #e0bc67;
 }
+
 
 /* Improved responsive design with better breakpoints */
 @media (max-width: 1024px) {

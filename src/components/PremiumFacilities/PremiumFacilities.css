@@ -4,7 +4,7 @@
 
 .section-wrapper {
   position: relative;
-  height: 600vh; /* enough height for all sticky sections to scroll through */
+  height: 500vh; 
 }
 
 .premium-facilities-header {
@@ -230,12 +230,6 @@
 
 /* Responsive styles */
 @media (min-width: 768px) {
-.facility-section {
-  position: sticky;
-  top: 0; /* stick to the top of viewport */
-  height: 100vh; /* full screen each */
-  overflow: hidden; 
-}
 
 .facility-heading {
   font-family: "Italiana", serif;
@@ -278,17 +272,8 @@
 }
 
 @media (max-width: 615px) {
-.section-wrapper {
-  position: relative;
-  height: 490vh; /* enough height for all sticky sections to scroll through */
-}
 
- .facility-section {
-    position: sticky;
-    top: 0;             /* stick to the top of viewport */
-    height: 100vh;      /* full screen each */
-    overflow: hidden;
-  }
+
 
 .heading-text span .text-hover{
 display: none;

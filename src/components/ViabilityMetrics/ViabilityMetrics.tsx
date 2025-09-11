@@ -7,12 +7,48 @@ import { useState, useRef } from "react";
 
 const ViabilityMetrics = () => {
   const metrics = [
-    { id: "01", icon: <ImLocation2 color="#fff" />, title: "LOCATION", subtitle: "RATING", description: "Positioned in a high-growth commercial zone." },
-    { id: "02", icon: <FaHandHoldingUsd color="#fff" />, title: "ROI", subtitle: "RATING", description: "Watch your investment work harder for you." },
-    { id: "03", icon: <GiProfit color="#fff" />, title: "RENTAL YIELD", subtitle: "RATING", description: "Earn more, effortlessly, with premium yields." },
-    { id: "04", icon: <FaChartLine color="#fff" />, title: "DEMAND", subtitle: "RATING", description: "Spaces here don’t stay empty for long." },
-    { id: "05", icon: <FaEye color="#fff" />, title: "VISIBILITY", subtitle: "RATING", description: "Be seen where it matters most." },
-    { id: "06", icon: <SiSyncthing color="#fff" />, title: "CONNECTION", subtitle: "RATING", description: "Plugged into everything roads, rails, and results." },
+    {
+      id: "01",
+      icon: <ImLocation2 color="#fff" />,
+      title: "LOCATION",
+      subtitle: "RATING",
+      description: "Positioned in a high-growth commercial zone.",
+    },
+    {
+      id: "02",
+      icon: <FaHandHoldingUsd color="#fff" />,
+      title: "ROI",
+      subtitle: "RATING",
+      description: "Watch your investment work harder for you.",
+    },
+    {
+      id: "03",
+      icon: <GiProfit color="#fff" />,
+      title: "RENTAL YIELD",
+      subtitle: "RATING",
+      description: "Earn more, effortlessly, with premium yields.",
+    },
+    {
+      id: "04",
+      icon: <FaChartLine color="#fff" />,
+      title: "DEMAND",
+      subtitle: "RATING",
+      description: "Spaces here don’t stay empty for long.",
+    },
+    {
+      id: "05",
+      icon: <FaEye color="#fff" />,
+      title: "VISIBILITY",
+      subtitle: "RATING",
+      description: "Be seen where it matters most.",
+    },
+    {
+      id: "06",
+      icon: <SiSyncthing color="#fff" />,
+      title: "CONNECTION",
+      subtitle: "RATING",
+      description: "Plugged into everything roads, rails, and results.",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,29 +120,22 @@ const ViabilityMetrics = () => {
       </div>
       <div className="section-overlay" />
 
-      <div className="cards-container">
+      <div className="location-section">
         <h2 className="section-title">Viability Metrics</h2>
-
-        <div
-          className="carousel-wrapper"
-          onWheel={handleWheel}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          {getVisibleCards().map((card) => {
-            const isCenter = card.position === "center";
-            return (
-              <div key={`${card.id}-${card.displayIndex}`} className={`metric-card ${card.position}`}>
-                <div className="card-content">
-                  <div className={`card-icon ${isCenter ? "center" : "small"}`}>{card.icon}</div>
-                  <div className="card-text">
-                    <h3 className={`card-title ${isCenter ? "center" : "small"}`}>{card.title}</h3>
-                    <p className={`card-description ${isCenter ? "center" : "small"}`}>{card.description}</p>
-                  </div>
+        <div className="location-main">
+          {metrics.map((location) => (
+            <div key={location.id} className="location-card">
+              <div className="location-icon-circle">
+                <div className="location-icon">{location.icon}</div>
+              </div>
+              <div className="location-content">
+                <div className="location-text">
+                  <h3 className="location-title">{location.title}</h3>
+                  <p className="location-description">{location.description}</p>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

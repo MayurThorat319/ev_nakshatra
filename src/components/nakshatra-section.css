@@ -296,4 +296,22 @@
 .nakshatra__labels {
 display: none;
 }
+.nakshatra__image-wrap--expand {
+   flex: 1 0 100%; /* Take up all available space */
+  min-height: 100%; /* Account for padding */
+}
+.nakshatra {
+  max-width: 1500vw;
+  min-height: 10vh;
+  background: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 20px;
+  font-family:
+    var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  overflow: hidden;
+}
 }
