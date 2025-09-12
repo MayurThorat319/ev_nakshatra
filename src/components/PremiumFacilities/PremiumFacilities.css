@@ -18,9 +18,10 @@
   font-size: 70px;
   font-weight: 400;
   color: #1f2937;
-  letter-spacing: 0.05em;
+  letter-spacing: 4%;
   text-align: start;
   padding: 0rem 2rem;
+  -webkit-text-stroke: 1px ;
 }
 
 .facility-section {

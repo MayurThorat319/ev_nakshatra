@@ -42,6 +42,7 @@
   font-size: 80px;
   margin: 10px 0 16px;
   text-align: left;
+  -webkit-text-stroke: 1px ;
 }
 
 .mw__text {
