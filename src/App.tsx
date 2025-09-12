@@ -29,7 +29,7 @@ function App() {
           backgroundColor: "#273B6791",
           color: "#ffffff",
           padding: "60px 20px 40px",
-          marginTop: "60px",
+          // marginTop: "60px",
         }}
       >
         <div

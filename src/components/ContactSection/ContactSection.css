@@ -1,5 +1,5 @@
 .contact-section {
-  padding: 60px 20px;
+  padding: 0px 20px;
   background-color: #f8f9fa;
   min-height: 400px;
 }
@@ -24,7 +24,8 @@
   font-size: 2.5rem;
   font-weight: 400;
   color: #6b7280;
-  margin: 0 40% 40px 0;
+   display: flex;
+  align-items: center;
   letter-spacing: 2px;
   line-height: 1.2;
 }
@@ -212,7 +213,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 10px;
-  margin-right: 40%;
+  /* margin-right: 40%; */
 }
 
 .submit-btn:hover {
@@ -233,8 +234,11 @@
   }
 
   .contact-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .contact-details {
@@ -276,7 +280,7 @@
   white-space: nowrap;
   justify-content: center;
   display: flex;
-  margin-left: 25vw;
+  /* margin-left: 25vw; */
   align-items: center;
   text-align: center;
 }

@@ -13,6 +13,7 @@
   /* Added smooth transition for visibility changes */
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     opacity: 0;
+   
 
 }
 
@@ -207,6 +208,8 @@
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(15px);
     transition: opacity 0.3s ease-in-out;
+     position: sticky;
+    top: 0;
   }
  
 }
