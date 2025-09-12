@@ -125,6 +125,7 @@
 }
 
 .nakshatra__image {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -132,9 +133,23 @@
   z-index: 1;
 }
 
+.nakshatra__image-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* adjust how tall the fade effect is */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
 .nakshatra__image-wrap {
   max-width: 100%;
   width: 100%;
+   position: relative;
+  overflow: hidden;
   margin: 0 auto;
   border-radius: 14px;
   background: #fff;
@@ -142,7 +157,7 @@
   min-height: 0;
   display: flex;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
   transition: all 1s ease-in;
 }
 
@@ -172,7 +187,7 @@
   font-size: 14px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 3;
 
   /* Transparent left border */
   border-left: 3px solid transparent;
@@ -185,8 +200,8 @@
 
 /* New nakshatra label style */
 .nakshatra__label--nakshatra {
-  top: 0%;
-  right: 40%;
+  top: 0px;
+  right: 40vw;
   animation-delay: 5.5s;
   font-family: "Jura";
   border-top: 2px solid rgba(255, 255, 255, 0.884);
@@ -199,8 +214,8 @@
 
 /* Positioned labels to match the screenshot */
 .nakshatra__label--elite {
-  top: 45%;
-  left: -1%;
+  top: 200px;
+  left: -1vw;
   animation-delay: 6s;
   font-family: "Jura";
   border-top: 2px solid rgba(255, 255, 255, 0.884);
@@ -211,8 +226,8 @@
 }
 
 .nakshatra__label--edge {
-  top: 25%;
-  right: -1%;
+  top: 250px;
+  right: -1vw;
   animation-delay: 6.3s;
   font-family: "Jura";
   border-top: 2px solid rgba(255, 255, 255, 0.884);
@@ -223,7 +238,7 @@
 }
 
 .nakshatra__label--epicenter {
-  bottom: -1%;
+  bottom: -10px;
   left: 45%;
   transform: translateX(-50%);
   animation-delay: 6.6s;
@@ -261,25 +276,9 @@
     padding: 6px 12px;
   }
 
-  .nakshatra__label--nakshatra {
-    top: 10%;
-    right: 8%;
-    font-size: 14px;
-  }
+  
 
-  .nakshatra__label--elite {
-    top: 12%;
-    left: 5%;
-  }
 
-  .nakshatra__label--edge {
-    top: 20%;
-    right: 8%;
-  }
-
-  .nakshatra__label--epicenter {
-    bottom: 30%;
-  }
 }
 
 @media (max-width: 1920px) {
@@ -294,11 +293,29 @@
 
 @media (max-width: 615px) {
       .nakshatra__image {
-      
+      height: 100vh;
       }
-.nakshatra__labels {
+
+      .nakshatra__label--nakshatra {
+        right: 100px;
+      }
+
+      .nakshatra__label--elite {
 display: none;
 }
+
+.nakshatra__label--edge {
+  display: none;
+}
+
+.nakshatra__label--epicenter {
+  display: none;
+}
+
+.nakshatra__image-wrap::after {
+  height: 120px;
+}
+
 .nakshatra__image-wrap--expand {
    flex: 1 0 100%; /* Take up all available space */
   min-height: 100%; /* Account for padding */
@@ -317,4 +334,8 @@ display: none;
     "Segoe UI Symbol", "Noto Color Emoji";
   overflow: hidden;
 }
+/* .nakshatra__label {
+  display: none;
+
+} */
 }

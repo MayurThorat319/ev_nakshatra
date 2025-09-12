@@ -12,17 +12,16 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   /* Added smooth transition for visibility changes */
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+
 }
 
-/* Added visibility states for scroll-based showing/hiding */
-.NavMain.hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-}
+
 
 .NavMain.visible {
-  transform: translateY(0);
   opacity: 1;
+    pointer-events: auto;
+
 }
 
 /* Cyber link styles */
@@ -201,6 +200,16 @@
   color: #e0bc67;
 }
 
+@media (max-width: 617px) {
+  .NavMain {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    transition: opacity 0.3s ease-in-out;
+  }
+ 
+}
 
 /* Improved responsive design with better breakpoints */
 @media (max-width: 1024px) {
@@ -218,6 +227,10 @@
 }
 
 @media (max-width: 768px) {
+  .NavMain{
+      -webkit-backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.658);
+  }
   .NavContainer {
     padding: 1rem;
   }
@@ -226,17 +239,17 @@
   .mobileMenuToggle {
     display: block;
   }
+  
 
   .centerSide {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(15px);
+    background: rgba(243, 255, 253, 0.822);
     -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transform: translateY(-100%);
+    background: rgba(0, 0, 0, 0.658);
+    backdrop-filter: blur(10px);    transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -249,6 +262,7 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+    position: fixed;
   }
 
   .NavLinks {
@@ -283,6 +297,9 @@
 
 /* Extra small screens optimization */
 @media (max-width: 480px) {
+    .mobileMenuToggle {
+    display: block;
+  }
   .NavContainer {
     padding: 0.75rem;
   }
@@ -304,6 +321,9 @@
 
 /* Very small screens */
 @media (max-width: 360px) {
+    .mobileMenuToggle {
+    display: block;
+  }
   .NavContainer {
     padding: 0.5rem;
   }

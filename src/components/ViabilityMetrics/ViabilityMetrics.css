@@ -29,6 +29,15 @@
   opacity: 1;
 }
 
+.viability-metrics::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #ffffff 5px, rgba(255, 255, 255, 0) 200px, rgba(255, 255, 255, 0) calc(100% - 200px), #ffffff 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
 .location-section{
   display: none;
 }
@@ -383,7 +392,7 @@
   align-items: center;
   
   justify-self: center;
-  margin-top: 8vw;
+  margin-top: 10vw;
   gap: 20px;
   padding: 15px 0px;
   /* Updated background to darker color for better text contrast */

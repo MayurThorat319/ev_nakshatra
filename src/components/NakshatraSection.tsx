@@ -8,31 +8,52 @@ const NakshatraSection: React.FC = () => {
   const [logoAnimation, setLogoAnimation] = useState("")
   const [headerAnimation, setHeaderAnimation] = useState("")
   const [imageWrapAnimation, setImageWrapAnimation] = useState("")
+  const [imageSrc, setImageSrc] = useState("/images/nakshatra.jpeg")
 
   useEffect(() => {
-      if (typeof window !== "undefined") {
-    window.history.scrollRestoration = "manual"
-    window.scrollTo(0, 0)
-  }
-    // After 1 second, add the slide up animation class to the title
+    if (typeof window !== "undefined") {
+      window.history.scrollRestoration = "manual"
+      window.scrollTo(0, 0)
+
+      // initial check
+      if (window.innerWidth <= 615) {
+        setImageSrc("/images/capitol.jpeg")
+      }
+
+      // listener for resizing
+      const handleResize = () => {
+        if (window.innerWidth <= 615) {
+          setImageSrc("/images/capitol.jpeg")
+        } else {
+          setImageSrc("/images/nakshatra.jpeg")
+        }
+      }
+
+      window.addEventListener("resize", handleResize)
+
+      return () => window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
+  useEffect(() => {
+    // Title animation
     const timer1 = setTimeout(() => {
       setTitleAnimation("nakshatra__title--slide-up")
     }, 1000)
-    
-    // After 4 seconds, add the slide down animation to the title
-    // and fade out the logo
+
+    // Slide down + fade logo
     const timer2 = setTimeout(() => {
       setTitleAnimation("nakshatra__title--slide-down")
       setLogoAnimation("nakshatra__brand-logo--fade-out")
     }, 4000)
-    
-    // After 5 seconds, collapse the header and expand the image
+
+    // Collapse + expand image
     const timer3 = setTimeout(() => {
       setHeaderAnimation("nakshatra__header--collapse")
       setImageWrapAnimation("nakshatra__image-wrap--expand")
     }, 5000)
 
-     return () => {
+    return () => {
       clearTimeout(timer1)
       clearTimeout(timer2)
       clearTimeout(timer3)
@@ -52,17 +73,16 @@ const NakshatraSection: React.FC = () => {
 
       <div className={`nakshatra__image-wrap ${imageWrapAnimation}`}>
         <img
-          src="images/nakshatra.jpeg"
-          alt="Modern high-rise towers of the Nakshatra project"
+          src={imageSrc}
+          alt="Modern high-rise towers"
           className="nakshatra__image"
           loading="lazy"
         />
-        <div className="nakshatra__labels">
-          <div className="nakshatra__label nakshatra__label--nakshatra">Nakshatra</div>
-          <div className="nakshatra__label nakshatra__label--elite">Elite</div>
-          <div className="nakshatra__label nakshatra__label--edge">Edge</div>
-          <div className="nakshatra__label nakshatra__label--epicenter">Epicenter</div>
-        </div>
+    
+        <div className="nakshatra__label nakshatra__label--nakshatra">Nakshatra</div>
+        <div className="nakshatra__label nakshatra__label--elite">Elite</div>
+        <div className="nakshatra__label nakshatra__label--edge">Edge</div>
+        <div className="nakshatra__label nakshatra__label--epicenter">Epicenter</div>
       </div>
     </section>
   )

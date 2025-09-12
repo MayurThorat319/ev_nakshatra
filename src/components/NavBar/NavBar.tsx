@@ -8,22 +8,30 @@ function NakshatraNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
-useEffect(() => {
-  const handleScroll = () => {
-    const nakshatraSection = document.querySelector(".nakshatra") as HTMLElement | null
-    if (nakshatraSection) {
-      const sectionHeight = nakshatraSection.offsetHeight
-      const scrollPosition = window.scrollY
-      const threshold = sectionHeight * 0.5 // 50% of the section height
+// useEffect(() => {
+//   const handleScroll = () => {
+//     const nakshatraSection = document.querySelector(".nakshatra") as HTMLElement | null
+//     if (nakshatraSection) {
+//       const sectionHeight = nakshatraSection.offsetHeight
+//       const scrollPosition = window.scrollY
+//       const threshold = sectionHeight * 0.5 // 50% of the section height
 
-      setIsVisible(scrollPosition > threshold)
-    }
-  }
+//       setIsVisible(scrollPosition > threshold)
+//     }
+//   }
 
-  window.addEventListener("scroll", handleScroll)
-  return () => window.removeEventListener("scroll", handleScroll)
-}, [])
+//   window.addEventListener("scroll", handleScroll)
+//   return () => window.removeEventListener("scroll", handleScroll)
+// }, [])
 
+useEffect(()=>{
+  const handleScroll=()=>{
+    setIsVisible(window.scrollY>50);
+
+  };
+  window.addEventListener("scroll",handleScroll);
+  return ()=>window.removeEventListener("scroll", handleScroll)
+},[]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -35,7 +43,7 @@ useEffect(() => {
 
   return (
     <>
-      <div className={`${styles.NavMain} ${isVisible ? styles.visible : styles.hidden}`}>
+      <div className={`${styles.NavMain} ${isVisible ? styles.visible : ""}`}>
         <div className={styles.NavContainer}>
           <div className={styles.leftSide}>
             <img src="/images/Capitol_9.png" alt="10 Marina Bay Vashi Logo" className={styles.Logo} />
