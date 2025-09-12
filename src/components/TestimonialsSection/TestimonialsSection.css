@@ -36,14 +36,14 @@
 
 .testimonials-subtitle {
   font-family: "Italiana", serif;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 400;
   color: #334155;
   margin-bottom: 1.5rem;
-  line-height: 0.8;
+  line-height: 0.2;
   -webkit-text-stroke: 0.5px #111;
   letter-spacing: 2px; /* adjust as needed */
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.1rem;
 }
 
 .testimonials-description {
@@ -271,12 +271,35 @@
 }
 
 @media screen and (min-width:616px) and (max-width: 1076px) {
-  .testimonials-subtitle {
+  /* .testimonials-subtitle {
     line-height: 0.8;
-  }
-
+  } */
+   .testimonials-title {
+  font-family: "Jura";
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
-@media screen and (max-width: 615px) {
+
+.testimonials-subtitle {
+  font-family: "Italiana", serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #334155;
+  margin-bottom: 1.5rem;
+  line-height: 0.9;
+  -webkit-text-stroke: 0.5px #111;
+  letter-spacing: 2px; /* adjust as needed */
+  margin-bottom: 0.1rem;
+}
+
+   .third-slider {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
   .testimonials-section {
     min-height: 70vh;
   }
