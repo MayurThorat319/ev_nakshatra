@@ -12,42 +12,42 @@ const ViabilityMetrics = () => {
       icon: <ImLocation2 color="#fff" />,
       title: "LOCATION",
       subtitle: "RATING",
-      description: "Positioned in a high-growth commercial zone.",
+      description: "Prime commercial hotspot",
     },
     {
       id: "02",
       icon: <FaHandHoldingUsd color="#fff" />,
       title: "ROI",
       subtitle: "RATING",
-      description: "Watch your investment work harder for you.",
+      description: "Power up your investment.",
     },
     {
       id: "03",
       icon: <GiProfit color="#fff" />,
       title: "RENTAL YIELD",
       subtitle: "RATING",
-      description: "Earn more, effortlessly, with premium yields.",
+      description: "Premium yields. Effortless gains.",
     },
     {
       id: "04",
       icon: <FaChartLine color="#fff" />,
       title: "DEMAND",
       subtitle: "RATING",
-      description: "Spaces here don’t stay empty for long.",
+      description: "High-occupancy zone.",
     },
     {
       id: "05",
       icon: <FaEye color="#fff" />,
       title: "VISIBILITY",
       subtitle: "RATING",
-      description: "Be seen where it matters most.",
+      description: "Right place. Right exposure.",
     },
     {
       id: "06",
       icon: <SiSyncthing color="#fff" />,
       title: "CONNECTION",
       subtitle: "RATING",
-      description: "Plugged into everything roads, rails, and results.",
+      description: "Tied to transit and triumph.",
     },
   ];
 
@@ -128,12 +128,14 @@ const ViabilityMetrics = () => {
               <div className="location-icon-circle">
                 <div className="location-icon">{location.icon}</div>
               </div>
-              <div className="location-content">
+             <div className="loction">
                 <div className="location-text">
                   <h3 className="location-title">{location.title}</h3>
                   <p className="location-description">{location.description}</p>
                 </div>
-              </div>
+             </div>
+              
+              
             </div>
           ))}
         </div>

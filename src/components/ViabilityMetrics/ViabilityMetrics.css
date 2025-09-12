@@ -33,7 +33,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, #ffffff 5px, rgba(255, 255, 255, 0) 200px, rgba(255, 255, 255, 0) calc(100% - 200px), #ffffff 100%);
+  background: linear-gradient(to bottom, #ffffff 5px, rgba(255, 255, 255, 0) 250px, rgba(255, 255, 255, 0) calc(100% - 200px), #ffffff 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -295,8 +295,15 @@
   }
 
   .viability-metrics {
-    padding: 60px 15px;
+    padding: 60px 20px 60px 60px;
+      background-color: #1a202c;
+  min-height: 100vh;
+  display:block;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
   }
+
 
   .metric-card {
     height: 240px;
@@ -377,7 +384,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-
+width: 100%;
   min-height: 100vh;
   font-family: "Arial", sans-serif;
 }
@@ -393,8 +400,8 @@
   
   justify-self: center;
   margin-top: 10vw;
-  gap: 20px;
-  padding: 15px 0px;
+  gap: 17px;
+  padding: 5px 0px;
   /* Updated background to darker color for better text contrast */
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid #00d4aa;
@@ -402,12 +409,14 @@
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   max-width: 100%;
-  height: 5vh;
+  height: 6.8vh;
 }
 
 
 /* Added separate dark circle container for icon */
 .location-icon-circle {
+  position: absolute;
+  left: -40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -416,8 +425,8 @@
   border-radius: 50%;
   flex-shrink: 0;
   border: 0.9px solid #00f5cc;
-  width: 11vh;
-  height: 11vh;
+  width: 8.5vh;
+  height: 8.5vh;
 }
 
 .section-title {
@@ -430,6 +439,7 @@
   /* text-align: center; */
   /* margin-bottom: 2rem; */
   position: absolute;
+  letter-spacing: 4px;
 
 }
 
@@ -452,23 +462,23 @@
   /* fill: #00f5cc; */
 }
 
- .location-icon-circle {
-    padding-left: 0;
-    margin-left: 0;
-       position: absolute;
-    left: -13%;
-  }
-
+ 
 .location-content {
   width: 100%;
  
 }
-
-/* Added wrapper for text content to control layout */
-.location-text {
+.loction{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+/* Added wrapper for text content to control layout */
+.location-text {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
@@ -482,11 +492,16 @@ text-align: center;
   /* Ensured high contrast white text */
   color: #ffffff;
   letter-spacing: 2px;
+    -webkit-text-stroke: 1px #e0dcdc;
+
   text-transform: uppercase;
 }
 
+.viability-metrics::after {
+  background: linear-gradient(to bottom, #ffffff 5px, rgba(255, 255, 255, 0) 200px, rgba(255, 255, 255, 0) calc(100% - 200px), #ffffff 100%);
+}
+
 .location-description {
-  width: 70%;
   font-family: "Jura";
   margin: 0;
   font-size: 13px;
@@ -519,7 +534,8 @@ text-align: center;
   }
 
   .location-title {
-    font-size: 14px;
+    font-size: 17px;
+    color: white;
   }
 
   .location-description {
