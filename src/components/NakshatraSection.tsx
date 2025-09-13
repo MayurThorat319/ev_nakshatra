@@ -8,7 +8,7 @@ const NakshatraSection: React.FC = () => {
   const [logoAnimation, setLogoAnimation] = useState("")
   const [headerAnimation, setHeaderAnimation] = useState("")
   const [imageWrapAnimation, setImageWrapAnimation] = useState("")
-  const [imageSrc, setImageSrc] = useState("/images/side_view.png")
+  const [imageSrc, setImageSrc] = useState("/images/nakshatra.jpeg")
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -25,7 +25,7 @@ const NakshatraSection: React.FC = () => {
         if (window.innerWidth <= 615) {
           setImageSrc("/images/modern_4.jpeg")
         } else {
-          setImageSrc("/images/side_view.png")
+          setImageSrc("/images/nakshatra.jpeg")
         }
       }
 
@@ -39,13 +39,13 @@ const NakshatraSection: React.FC = () => {
     // Title animation
     const timer1 = setTimeout(() => {
       setTitleAnimation("nakshatra__title--slide-up")
-    }, 1000)
+    }, 2000)
 
     // Slide down + fade logo
     const timer2 = setTimeout(() => {
       setTitleAnimation("nakshatra__title--slide-down")
       setLogoAnimation("nakshatra__brand-logo--fade-out")
-    }, 4000)
+    }, 5500)
 
     // Collapse + expand image
     const timer3 = setTimeout(() => {
