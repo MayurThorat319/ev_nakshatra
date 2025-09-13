@@ -33,7 +33,9 @@ const ModernWorkspaceSection: React.FC = () => {
           </h2>
 
           <p className="mw__text">
-            Big ideas need bold spaces. At NAKSHATRA, every square foot is
+            Big ideas need bold spaces. At <span style={{color: 
+              '#1E576C'
+            }}>CAPITOL 9</span>, every square foot is
             crafted for visionaries, leaders, and creators ready to turn
             ambition into action. Elegant layouts, curated amenities, and
             flexible design — all in one place. Whether you’re scaling up or
@@ -46,14 +48,13 @@ const ModernWorkspaceSection: React.FC = () => {
           </p>
 
           <p className="mw__text_mob">
-            Great ideas deserve striking environments. At NAKSHATRA, every inch
+            Great ideas deserve striking environments. At CAPITOL 9, every inch
             is thoughtfully designed. Whether you're scaling up or settling in,
             this is <br />
-            <a href="#" className="">
               <span style={{ color: "#1E576C" }}>
                 where your next chapter begins.
               </span>
-            </a>
+            
           </p>
         </div>
 
