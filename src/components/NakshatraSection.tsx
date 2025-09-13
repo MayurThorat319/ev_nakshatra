@@ -17,13 +17,13 @@ const NakshatraSection: React.FC = () => {
 
       // initial check
       if (window.innerWidth <= 615) {
-        setImageSrc("/images/side_mob.png")
+        setImageSrc("/images/modern_4.jpeg")
       }
 
       // listener for resizing
       const handleResize = () => {
         if (window.innerWidth <= 615) {
-          setImageSrc("/images/side_mob.png")
+          setImageSrc("/images/modern_4.jpeg")
         } else {
           setImageSrc("/images/side_view.png")
         }
