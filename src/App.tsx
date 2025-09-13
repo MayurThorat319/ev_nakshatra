@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -12,13 +12,47 @@ import NakshatraNavbar from "./components/NavBar/NavBar";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [showLive, setShowLive] = useState(false);
 
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition > windowHeight * 0.2) {
+      setShowLive(true);
+    } else {
+      setShowLive(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div className="main-bg">
-       <NakshatraNavbar />
-      <NakshatraSection />
-      <ModernWorkspace />
-      <ViabilityMetrics />
+      <NakshatraNavbar />
+       <div className="parallaxcontainer">
+        <div className={`parallaxItem upcoming ${showLive ? "moveUp" : ""}`}>
+          <NakshatraSection />
+        </div>
+        <div className={`parallaxItem liveproject ${showLive ? "showLive" : ""}`}>
+          <ModernWorkspace />
+        </div>
+
+      </div>
+             <ViabilityMetrics />
+      {/* <NakshatraSection />
+      <div className="parallaxcontainer">
+        <div className={`parallaxItem upcoming ${showLive ? "moveUp" : ""}`}>
+          <ModernWorkspace />
+        </div>
+        <div className={`parallaxItem liveproject ${showLive ? "showLive" : ""}`}>
+          <ViabilityMetrics />
+        </div>
+
+      </div> */}
+
       <PremiumFacilities />
       <TestimonialsSection />
       <ContactSection />
@@ -255,70 +289,70 @@ function App() {
             </div>
 
             {/* Get the app Section */}
-          {/* Get the app Section */}
-<div>
-  <h3
-    style={{
-      fontSize: "1.1rem",
-      fontWeight: "600",
-      marginBottom: "20px",
-      color: "white",
-    }}
-  >
-    Get the app
-  </h3>
+            {/* Get the app Section */}
+            <div>
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "600",
+                  marginBottom: "20px",
+                  color: "white",
+                }}
+              >
+                Get the app
+              </h3>
 
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      gap: "12px",
-    }}
-  >
-    {/* Google Play Button */}
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        background: "linear-gradient(90deg, #2c2c2c, #1e1e1e)",
-        padding: "10px 14px",
-        borderRadius: "10px",
-        cursor: "pointer",
-        boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
-        transition: "transform 0.2s ease, box-shadow 0.2s ease",
-        maxWidth: "220px", // keeps button compact
-        width: "80%", // responsive width
-        margin: "0 auto", // center on mobile
-      }}
-      onClick={() => {
-        window.open(
-          "https://play.google.com/store/apps/details?id=com.evhomes.ev_homes&hl=en",
-          "_blank"
-        );
-      }}
-      onMouseOver={(e) => {
-        e.currentTarget.style.transform = "translateY(-3px)";
-        e.currentTarget.style.boxShadow = "0 6px 14px rgba(0,0,0,0.5)";
-      }}
-      onMouseOut={(e) => {
-        e.currentTarget.style.transform = "translateY(0)";
-        e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
-      }}
-    >
-      {/* Google Play Badge */}
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-        alt="Google Play"
-        style={{
-          width: "100%",
-          height: "auto",
-          maxWidth: "180px", // keeps it proportional
-        }}
-      />
-    </div>
-  </div>
-</div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "12px",
+                }}
+              >
+                {/* Google Play Button */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "linear-gradient(90deg, #2c2c2c, #1e1e1e)",
+                    padding: "10px 14px",
+                    borderRadius: "10px",
+                    cursor: "pointer",
+                    boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+                    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                    maxWidth: "220px", // keeps button compact
+                    width: "80%", // responsive width
+                    margin: "0 auto", // center on mobile
+                  }}
+                  onClick={() => {
+                    window.open(
+                      "https://play.google.com/store/apps/details?id=com.evhomes.ev_homes&hl=en",
+                      "_blank"
+                    );
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3px)";
+                    e.currentTarget.style.boxShadow = "0 6px 14px rgba(0,0,0,0.5)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
+                  }}
+                >
+                  {/* Google Play Badge */}
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Google Play"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      maxWidth: "180px", // keeps it proportional
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
 
 
           </div>

@@ -53,4 +53,36 @@
 .read-the-docs {
   color: #888;
 }
-
+.parallaxcontainer {
+  position: relative;
+  height: 200vh; 
+    overflow: visible;
+}
+.parallaxItem {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 2s ease, opacity 2s ease;
+}
+.upcoming {
+  z-index: 2;
+}
+.liveproject {
+  z-index: 1;
+  transform: translateY(100vh) scale(0.8);
+  opacity: 0;
+}
+.moveUp {
+  transform: translateY(-100vh) scale(0.8);
+  opacity: 0;
+}
+.showLive {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  position: sticky;
+  top: 0; 
+  z-index: 3;
+}
