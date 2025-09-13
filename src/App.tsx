@@ -9,6 +9,7 @@ import { TestimonialsSection } from "./components/TestimonialsSection/Testimonia
 import ViabilityMetrics from "./components/ViabilityMetrics/ViabilityMetrics";
 import ContactSection from "./components/ContactSection/ContactSection";
 import NakshatraNavbar from "./components/NavBar/NavBar";
+import EventSignup from "./components/EventSignup";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,7 +22,8 @@ function App() {
       <ViabilityMetrics />
       <PremiumFacilities />
       <TestimonialsSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
+       <EventSignup />
       <footer
         className="animate-fade-up"
         id="contact"

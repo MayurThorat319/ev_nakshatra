@@ -56,20 +56,24 @@
 
 .nakshatra__title {
   /* Updated font-family to use CSS variable */
-  font-family: "Italiana", serif;
+ font-family: "Jura";
   margin: 0;
   font-weight: 400;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.2em;
   font-size: 90px;
   line-height: 0.7;
   text-align: center;
   flex: 1;
   z-index: 1;
   position: relative;
-  -webkit-text-stroke: 1px #111;
+  -webkit-text-stroke: 2px #111;
   paint-order: stroke fill;
   opacity: 0;
   transform: translateY(80px);
+}
+
+.nakshatra__title .inria {
+ font-family: "Jura";
 }
 
 @keyframes fadeSlideUp {

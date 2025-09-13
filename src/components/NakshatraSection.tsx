@@ -8,7 +8,7 @@ const NakshatraSection: React.FC = () => {
   const [logoAnimation, setLogoAnimation] = useState("")
   const [headerAnimation, setHeaderAnimation] = useState("")
   const [imageWrapAnimation, setImageWrapAnimation] = useState("")
-  const [imageSrc, setImageSrc] = useState("/images/nakshatra.jpeg")
+  const [imageSrc, setImageSrc] = useState("/images/side_view.png")
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -17,15 +17,15 @@ const NakshatraSection: React.FC = () => {
 
       // initial check
       if (window.innerWidth <= 615) {
-        setImageSrc("/images/capitol.jpeg")
+        setImageSrc("/images/side_mob.png")
       }
 
       // listener for resizing
       const handleResize = () => {
         if (window.innerWidth <= 615) {
-          setImageSrc("/images/capitol.jpeg")
+          setImageSrc("/images/side_mob.png")
         } else {
-          setImageSrc("/images/nakshatra.jpeg")
+          setImageSrc("/images/side_view.png")
         }
       }
 
@@ -68,7 +68,10 @@ const NakshatraSection: React.FC = () => {
           alt="EVM Homes Logo" 
           className={`nakshatra__brand-logo ${logoAnimation}`} 
         />
-        <h1 className={`nakshatra__title ${titleAnimation}`}>NAKSHATRA</h1>
+        <h1 className={`nakshatra__title ${titleAnimation}`}>
+  CAPITOL <span className="inria">9</span>
+</h1>
+
       </div>
 
       <div className={`nakshatra__image-wrap ${imageWrapAnimation}`}>
@@ -79,7 +82,7 @@ const NakshatraSection: React.FC = () => {
           loading="lazy"
         />
     
-        <div className="nakshatra__label nakshatra__label--nakshatra">Nakshatra</div>
+        <div className="nakshatra__label nakshatra__label--nakshatra">Capitol 9</div>
         <div className="nakshatra__label nakshatra__label--elite">Elite</div>
         <div className="nakshatra__label nakshatra__label--edge">Edge</div>
         <div className="nakshatra__label nakshatra__label--epicenter">Epicenter</div>

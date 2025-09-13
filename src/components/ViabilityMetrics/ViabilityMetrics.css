@@ -458,7 +458,7 @@ width: 100%;
 .location-icon svg {
   width: 20px;
   height: 20px;
-  color: #00f5cc;
+  /* color: #00f5cc; */
   /* fill: #00f5cc; */
 }
 

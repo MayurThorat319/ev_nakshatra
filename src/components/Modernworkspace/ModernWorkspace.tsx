@@ -14,7 +14,7 @@ const images: CarouselImage[] = [
     alt: "Open modern office with large windows and desks",
   },
   {
-    src: "/images/Kids_play_area.jpeg",  // file in public/images/skyline.png
+    src: "/images/modern_4.jpeg",  // file in public/images/skyline.png
     alt: "Evening skyline with illuminated towers and glass facades",
   },
 ];
