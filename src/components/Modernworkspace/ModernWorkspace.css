@@ -30,6 +30,9 @@
   margin-right: 3vw;
 }
 
+.cs-card--back {
+  display: none;
+}
 .mw__copy {
   max-width: 580px;
 }
@@ -211,7 +214,7 @@
 
 .mw__text_mob {
   font-family: "Jura";
-  font-size: 18px;
+  font-size: 19px;
   line-height: 26px;
   font-weight: 400;
   color: #6b7280;
@@ -220,6 +223,8 @@ display: flex;
 flex-direction: column;
   
 }
+
+
 .cs-card--back {
     display: none;
   }
