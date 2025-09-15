@@ -175,18 +175,18 @@
 
 
 @media (max-width: 615px) {
-  html,body{
+  /* html,body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-  }
+  } */
 .mw__inner {
   
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-right: 3vw;
+  margin-right: 0vw;
 }
 
 .mw__title {
@@ -196,7 +196,7 @@
   letter-spacing: 2.5px;
   line-height: 100%;
   font-size: 8vw;
-  margin: 10px 0 5px;
+  margin: 10px 0 2px;
   text-align: left;
   white-space: nowrap;
 }
