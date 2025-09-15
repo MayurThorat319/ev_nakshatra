@@ -1,0 +1,224 @@
+.demographics-section {
+  background: 
+    linear-gradient(rgba(26, 26, 46, 0.9), rgba(15, 52, 96, 0.9)), 
+    url("images/demography.png"); /* replace with your actual image file */
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; optional: makes background stay while scrolling */
+  color: white;
+  padding: 60px 20px;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+
+.demographics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.demographics-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.demographics-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.demographics-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.demographic-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.demographic-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+  font-size: 2rem;
+  filter: grayscale(1) brightness(2);
+}
+
+.demographic-content {
+  flex: 1;
+}
+
+.demographic-title-item {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.demographic-values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.value-badges {
+  display: flex;
+  gap: 15px;
+}
+
+.badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge.present {
+  background: #4ade80;
+  color: #000;
+}
+
+.badge.future {
+  background: #22d3ee;
+  color: #000;
+}
+
+.values-display {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.present-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4ade80;
+}
+
+.future-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #22d3ee;
+}
+
+.progress-container {
+  margin: 20px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.present-progress {
+  background: #4ade80;
+}
+
+.future-progress {
+  background: #22d3ee;
+}
+
+.value-labels {
+  margin-top: 15px;
+}
+
+.label-group {
+  display: flex;
+  gap: 30px;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.present-label {
+  color: #4ade80;
+}
+
+.future-label {
+  color: #22d3ee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .demographics-section {
+    padding: 40px 15px;
+  }
+
+  .demographics-title {
+    font-size: 2.5rem;
+  }
+
+  .demographic-item {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .demographic-values {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .values-display {
+    gap: 20px;
+  }
+
+  .label-group {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .demographics-title {
+    font-size: 2rem;
+  }
+
+  .present-value,
+  .future-value {
+    font-size: 1.5rem;
+  }
+
+  .value-badges {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
