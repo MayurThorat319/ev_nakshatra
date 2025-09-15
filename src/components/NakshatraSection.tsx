@@ -17,13 +17,13 @@ const NakshatraSection: React.FC = () => {
 
       // initial check
       if (window.innerWidth <= 615) {
-        setImageSrc("/images/capitol.jpeg")
+        setImageSrc("/images/modern_4.jpeg")
       }
 
       // listener for resizing
       const handleResize = () => {
         if (window.innerWidth <= 615) {
-          setImageSrc("/images/capitol.jpeg")
+          setImageSrc("/images/modern_4.jpeg")
         } else {
           setImageSrc("/images/nakshatra.jpeg")
         }
@@ -39,13 +39,13 @@ const NakshatraSection: React.FC = () => {
     // Title animation
     const timer1 = setTimeout(() => {
       setTitleAnimation("nakshatra__title--slide-up")
-    }, 1000)
+    }, 2000)
 
     // Slide down + fade logo
     const timer2 = setTimeout(() => {
       setTitleAnimation("nakshatra__title--slide-down")
       setLogoAnimation("nakshatra__brand-logo--fade-out")
-    }, 4000)
+    }, 5500)
 
     // Collapse + expand image
     const timer3 = setTimeout(() => {
@@ -68,7 +68,10 @@ const NakshatraSection: React.FC = () => {
           alt="EVM Homes Logo" 
           className={`nakshatra__brand-logo ${logoAnimation}`} 
         />
-        <h1 className={`nakshatra__title ${titleAnimation}`}>NAKSHATRA</h1>
+        <h1 className={`nakshatra__title ${titleAnimation}`}>
+  CAPITOL <span className="inria">9</span>
+</h1>
+
       </div>
 
       <div className={`nakshatra__image-wrap ${imageWrapAnimation}`}>
@@ -79,7 +82,7 @@ const NakshatraSection: React.FC = () => {
           loading="lazy"
         />
     
-        <div className="nakshatra__label nakshatra__label--nakshatra">Nakshatra</div>
+        <div className="nakshatra__label nakshatra__label--nakshatra">Capitol 9</div>
         <div className="nakshatra__label nakshatra__label--elite">Elite</div>
         <div className="nakshatra__label nakshatra__label--edge">Edge</div>
         <div className="nakshatra__label nakshatra__label--epicenter">Epicenter</div>
