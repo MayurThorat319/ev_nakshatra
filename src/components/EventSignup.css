@@ -1,7 +1,7 @@
 .event-signup {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("images/capitol.jpeg");
+    url("images/contact_us.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -27,12 +27,13 @@
 }
 
 .event-signup__title {
-  font-size: 4rem;
+  font-family: "Italiana", serif;
+  font-size: 7vw;
   font-weight: 900;
   line-height: 0.9;
   margin-bottom: 3rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 4%;
 }
 
 .event-signup__session h3 {
@@ -118,10 +119,10 @@
 
 /* Right Side Styles */
 .event-signup__right {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   padding: 3rem;
   border-radius: 10px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   position: relative;
 }
 
@@ -254,9 +255,9 @@
     gap: 2rem;
   }
 
-  .event-signup__title {
+  /* .event-signup__title {
     font-size: 2.5rem;
-  }
+  } */
 
   .event-signup__right {
     padding: 2rem;

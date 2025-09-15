@@ -228,4 +228,29 @@ flex-direction: column;
 .cs-card--back {
     display: none;
   }
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mw__fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.3s ease-in-out, transform 2.0s ease-in-out;
+}
+
+.mw__fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 }

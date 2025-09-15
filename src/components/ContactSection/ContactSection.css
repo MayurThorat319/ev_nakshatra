@@ -142,14 +142,14 @@
 .social-icon-2 {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     #feda75,
     #fa7e1e,
     #d62976,
     #962fbf,
     #4f5bd5
-  );
+  ); */
 }
 .socialcontainer:hover .social-icon-2 {
   transform: translateY(-70px);

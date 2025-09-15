@@ -3,7 +3,7 @@ import "./ViabilityMetrics.css";
 import { ImLocation2 } from "react-icons/im";
 import { GiProfit } from "react-icons/gi";
 import { SiSyncthing } from "react-icons/si";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const ViabilityMetrics = () => {
   const metrics = [
@@ -54,51 +54,30 @@ const ViabilityMetrics = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartY = useRef(0);
 
-  // Mouse wheel (desktop)
-  const handleWheel = (e: React.WheelEvent) => {
-    e.preventDefault(); // stop page scroll
-    e.stopPropagation();
+   const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
-    if (e.deltaY > 0) {
-      setCurrentIndex((prev) => (prev + 1) % metrics.length);
-    } else {
-      setCurrentIndex((prev) => (prev - 1 + metrics.length) % metrics.length);
-    }
-  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => setIsVisible(entry.isIntersecting));
+      },
+      { threshold: 0.2 }
+    );
 
-  // Swipe (mobile)
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartY.current = e.touches[0].clientY;
-  };
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
 
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    const touchEndY = e.changedTouches[0].clientY;
-    const diffY = touchStartY.current - touchEndY;
-
-    if (Math.abs(diffY) > 50) {
-      if (diffY > 0) {
-        setCurrentIndex((prev) => (prev + 1) % metrics.length); // swipe up → next
-      } else {
-        setCurrentIndex((prev) => (prev - 1 + metrics.length) % metrics.length); // swipe down → prev
-      }
-    }
-  };
-
-  const getVisibleCards = () => {
-    const cards = [];
-    for (let i = -1; i <= 1; i++) {
-      const index = (currentIndex + i + metrics.length) % metrics.length;
-      cards.push({
-        ...metrics[index],
-        displayIndex: i,
-        position: i === -1 ? "top" : i === 0 ? "center" : "bottom",
-      });
-    }
-    return cards;
-  };
 
   return (
-    <section className="viability-metrics" id="viability">
+  <section
+      ref={sectionRef}
+      className={`viability-metrics fade-section ${isVisible ? "visible" : ""}`}
+      id="viability"
+    >
       <div className="metrics-container">
         <h2 className="metrics-title">Viability Metrics</h2>
         <div className="metrics-grid">

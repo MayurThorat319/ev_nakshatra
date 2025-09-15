@@ -412,6 +412,18 @@ width: 100%;
   height: 6.8vh;
 }
 
+.fade-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Added separate dark circle container for icon */
 .location-icon-circle {
@@ -454,6 +466,8 @@ width: 100%;
   border-radius: 50%;
 
 }
+
+
 
 .location-icon svg {
   width: 20px;

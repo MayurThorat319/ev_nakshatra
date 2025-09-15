@@ -86,3 +86,24 @@
   top: 0; 
   z-index: 3;
 }
+
+@media (max-width: 615px) {
+  .parallaxcontainer {
+    height: auto; /* prevent extra scroll space */
+    overflow: visible;
+  }
+
+  .parallaxItem {
+    position: relative;
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    height: auto; /* let content define its height */
+  }
+
+  /* optional: reset z-index so they stack normally */
+  .upcoming, 
+  .liveproject {
+    z-index: auto !important;
+  }
+}

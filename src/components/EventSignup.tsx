@@ -34,7 +34,7 @@ const EventSignup: React.FC = () => {
       <div className="event-signup__container">
         {/* Left Side - Event Details */}
         <div className="event-signup__left">
-          <h1 className="event-signup__title">
+          <h1 className="event-signup__title" style={{letterSpacing: 4}}>
            CONTACT US
             {/* <br /> */}
             
@@ -199,12 +199,14 @@ const EventSignup: React.FC = () => {
     </div>
   
     <div className="social-icon-2">
+     
       <a href="https://www.instagram.com/evhomesofficial/?igsh=MTRuZnA1MDd3Ymw0Mg%3D%3D#" aria-label="Instagram">
-        <svg width="20" height="20" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+       <img src="images/insta_2.png" width={60} height={60}></img>
+        {/* <svg width="20" height="20" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="white" strokeWidth="2"/>
           <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="white" strokeWidth="2"/>
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" strokeWidth="2"/>
-        </svg>
+        </svg> */}
       </a>
     </div>
   </div>

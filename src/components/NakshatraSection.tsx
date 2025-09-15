@@ -17,13 +17,13 @@ const NakshatraSection: React.FC = () => {
 
       // initial check
       if (window.innerWidth <= 615) {
-        setImageSrc("/images/modern_4.jpeg")
+        setImageSrc("/images/Capitol_mobile.png")
       }
 
       // listener for resizing
       const handleResize = () => {
         if (window.innerWidth <= 615) {
-          setImageSrc("/images/modern_4.jpeg")
+          setImageSrc("/images/Capitol_mobile.png")
         } else {
           setImageSrc("/images/nakshatra.jpeg")
         }
@@ -36,29 +36,35 @@ const NakshatraSection: React.FC = () => {
   }, [])
 
   useEffect(() => {
-    // Title animation
-    const timer1 = setTimeout(() => {
-      setTitleAnimation("nakshatra__title--slide-up")
-    }, 2000)
-
-    // Slide down + fade logo
-    const timer2 = setTimeout(() => {
-      setTitleAnimation("nakshatra__title--slide-down")
-      setLogoAnimation("nakshatra__brand-logo--fade-out")
-    }, 5500)
-
-    // Collapse + expand image
+  // Title slide up
+  const timer1 = setTimeout(() => {
+    setTitleAnimation("nakshatra__title--slide-up")
     const timer3 = setTimeout(() => {
-      setHeaderAnimation("nakshatra__header--collapse")
-      setImageWrapAnimation("nakshatra__image-wrap--expand")
-    }, 5000)
+  setTitleAnimation("nakshatra__title--slide-down")
+  }, 2000)
 
-    return () => {
-      clearTimeout(timer1)
-      clearTimeout(timer2)
-      clearTimeout(timer3)
-    }
-  }, [])
+  }, 2000)
+
+  //   const timer3 = setTimeout(() => {
+  // setTitleAnimation("nakshatra__title--slide-down")
+  // }, 2000)
+
+
+  // Slide down title + fade logo + expand image together
+  const timer2 = setTimeout(() => {
+    // setTitleAnimation("nakshatra__title--slide-down")
+    setLogoAnimation("nakshatra__brand-logo--fade-out")
+    setHeaderAnimation("nakshatra__header--collapse")
+    setImageWrapAnimation("nakshatra__image-wrap--expand")
+  }, 5000) // all at same moment
+
+
+  return () => {
+    clearTimeout(timer1)
+    clearTimeout(timer2)
+  }
+}, [])
+
 
   return (
     <section className="nakshatra">
