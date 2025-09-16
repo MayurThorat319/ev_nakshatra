@@ -30,7 +30,7 @@ const EventSignup: React.FC = () => {
   };
 
   return (
-    <section className="event-signup">
+    <section id="contact" className="event-signup">
       <div className="event-signup__container">
         {/* Left Side - Event Details */}
         <div className="event-signup__left">
