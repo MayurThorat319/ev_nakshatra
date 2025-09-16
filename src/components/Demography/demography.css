@@ -1,6 +1,6 @@
 .demographics-section {
   background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(15, 52, 96, 0.9)),
-    url("images/demography.png"); /* replace with your actual image file */
+    url("images/demography_bg.png"); /* replace with your actual image file */
   background-size: cover;
   background-position: center;
   /* background-attachment: fixed; optional: makes background stay while scrolling */
