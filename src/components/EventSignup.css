@@ -97,6 +97,44 @@
   opacity: 0.8;
 }
 
+.phone-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.phone-link:hover {
+  color: #f8dc87;
+}
+
+.location-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.location-link:hover {
+  color: #f8dc87;
+}
+
+.email-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.email-link:hover {
+  color: #f8dc87;
+}
+
+
 .event-signup__location {
   display: flex;
   align-items: flex-start; /* better for multiline */

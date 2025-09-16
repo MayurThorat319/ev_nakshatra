@@ -1,6 +1,5 @@
 .demographics-section {
-  background: 
-    linear-gradient(rgba(26, 26, 46, 0.9), rgba(15, 52, 96, 0.9)), 
+  background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(15, 52, 96, 0.9)),
     url("images/demography.png"); /* replace with your actual image file */
   background-size: cover;
   background-position: center;
@@ -10,7 +9,6 @@
   min-height: 100vh;
   font-family: "Arial", sans-serif;
 }
-
 
 .demographics-container {
   max-width: 1200px;
@@ -110,7 +108,7 @@
 
 .values-display {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -177,7 +175,12 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 615px) {
+  .demographic-content {
+    flex: 1;
+    width: 100%;
+  }
+
   .demographics-section {
     padding: 40px 15px;
   }
@@ -189,25 +192,37 @@
   .demographic-item {
     flex-direction: column;
     gap: 20px;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .demographic-values {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
     align-items: center;
+    justify-content: space-between;
   }
 
   .values-display {
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 
   .label-group {
     justify-content: center;
   }
+  .value-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .demographics-title {
     font-size: 2rem;
   }
@@ -221,4 +236,4 @@
     flex-direction: column;
     gap: 10px;
   }
-}
+} */

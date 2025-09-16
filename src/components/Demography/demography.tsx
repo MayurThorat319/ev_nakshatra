@@ -1,14 +1,14 @@
-import type React from "react"
-import "./demography.css"
+import type React from "react";
+import "./demography.css";
 
 interface DemographicItem {
-  icon: string
-  title: string
-  description: string
-  presentValue: string
-  futureValue: string
-  presentProgress: number
-  futureProgress: number
+  icon: string;
+  title: string;
+  description: string;
+  presentValue: string;
+  futureValue: string;
+  presentProgress: number;
+  futureProgress: number;
 }
 
 const Demographics: React.FC = () => {
@@ -41,16 +41,18 @@ const Demographics: React.FC = () => {
       presentProgress: 31,
       futureProgress: 100,
     },
-  ]
+  ];
 
   return (
     <section className="demographics-section">
       <div className="demographics-container">
         <h2 className="demographics-title">DEMOGRAPHY</h2>
         <p className="demographics-subtitle">
-          Vashi Boasts of High End and High Value Homes which translates to more High Net Worth Homebuyers Moving into
-          Vashi, and Upcoming Projects and Further Migration of High Net Worth Individuals in to Vashi would make it one
-          of the single Largest Aggregation of High Net Worth Individuals in One locality.
+          Vashi Boasts of High End and High Value Homes which translates to more
+          High Net Worth Homebuyers Moving into Vashi, and Upcoming Projects and
+          Further Migration of High Net Worth Individuals in to Vashi would make
+          it one of the single Largest Aggregation of High Net Worth Individuals
+          in One locality.
         </p>
 
         <div className="demographics-stats">
@@ -66,21 +68,27 @@ const Demographics: React.FC = () => {
                 <div className="demographic-values">
                   <div className="value-badges">
                     <span className="badge present">Present</span>
-                    <span className="badge future">Near Future</span>
+                    <span className="present-value">{item.presentValue}</span>
                   </div>
 
                   <div className="values-display">
-                    <span className="present-value">{item.presentValue}</span>
+                    <span className="badge future">Near Future</span>
+
                     <span className="future-value">{item.futureValue}</span>
                   </div>
                 </div>
 
                 <div className="progress-container">
                   <div className="progress-bar">
-                    <div className="progress-fill present-progress" style={{ width: `${item.presentProgress}%` }}></div>
+                    <div
+                      className="progress-fill present-progress"
+                      style={{ width: `${item.presentProgress}%` }}
+                    ></div>
                     <div
                       className="progress-fill future-progress"
-                      style={{ width: `${item.futureProgress - item.presentProgress}%` }}
+                      style={{
+                        width: `${item.futureProgress - item.presentProgress}%`,
+                      }}
                     ></div>
                   </div>
                 </div>
@@ -97,7 +105,7 @@ const Demographics: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Demographics
+export default Demographics;
