@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import NakshatraSection from "./components/NakshatraSection";
 import ModernWorkspace from "./components/Modernworkspace/ModernWorkspace";
 import PremiumFacilities from "./components/PremiumFacilities/PremiumFacilities";
 import { TestimonialsSection } from "./components/TestimonialsSection/TestimonialsSection";
 import ViabilityMetrics from "./components/ViabilityMetrics/ViabilityMetrics";
-import ContactSection from "./components/ContactSection/ContactSection";
 import NakshatraNavbar from "./components/NavBar/NavBar";
 import EventSignup from "./components/EventSignup";
 import Demographics from "./components/Demography/demography";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [] = useState(0);
   const [showLive, setShowLive] = useState(false);
 
   const handleScroll = () => {

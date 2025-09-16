@@ -51,8 +51,7 @@ const ViabilityMetrics = () => {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const touchStartY = useRef(0);
+  const [] = useState(0);
 
    const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -81,7 +80,7 @@ const ViabilityMetrics = () => {
       <div className="metrics-container">
         <h2 className="metrics-title">Viability Metrics</h2>
         <div className="metrics-grid">
-          {metrics.map((metric, index) => (
+          {metrics.map((metric) => (
             <div key={metric.id} className="metric-card">
               <div className="metric-wrapper">
                 <div className="metric-icon">{metric.icon}</div>

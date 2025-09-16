@@ -133,34 +133,7 @@ const defaultThirdSliderTestimonials: Testimonial[] = [
   },
 ];
 
-const StarRating = ({ rating }: { rating: number }) => {
-  return (
-    <div className="star-rating">
-      {[...Array(5)].map((_, index) => (
-        <span key={index} className={`star ${index < rating ? "filled" : ""}`}>
-          ★
-        </span>
-      ))}
-    </div>
-  );
-};
 
-const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
-  return (
-    <div className="testimonial-card">
-      <StarRating rating={testimonial.rating} />
-      <p className="testimonial-text">{testimonial.text}</p>
-      <div className="testimonial-author">
-        <img
-          src={testimonial.avatar || "/placeholder.svg"}
-          alt={testimonial.name}
-          className="author-avatar"
-        />
-        <span className="author-name">{testimonial.name}</span>
-      </div>
-    </div>
-  );
-};
 
 const TestimonialSlider = ({
   testimonials,

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import "./carousel-stack.css"
 
 export type CarouselImage = { src: string; alt: string }
@@ -43,19 +43,6 @@ const CarouselStack: React.FC<CarouselStackProps> = ({
   }
 
   // Function to handle previous slide with animation
-  const prev = () => {
-    if (isTransitioning || images.length <= 1) return
-    
-    setDirection('prev')
-    setIsTransitioning(true)
-    setNextIndex(clampIndex(currentIndex - 1, images.length))
-    
-    // After transition completes, update current index
-    setTimeout(() => {
-      setCurrentIndex(clampIndex(currentIndex - 1, images.length))
-      setIsTransitioning(false)
-    }, 800) // Match this with CSS transition duration
-  }
 
   // Auto-advance
   useEffect(() => {
@@ -82,7 +69,6 @@ const CarouselStack: React.FC<CarouselStackProps> = ({
   const current = images[clampIndex(currentIndex, images.length)]
   const nextImg = images[clampIndex(nextIndex, images.length)]
 
-  const dots = useMemo(() => images.map((_, i) => i), [images])
 
   if (!images?.length) return null
 

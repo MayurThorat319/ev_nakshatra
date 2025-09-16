@@ -39,9 +39,9 @@ const NakshatraSection: React.FC = () => {
   // Title slide up
   const timer1 = setTimeout(() => {
     setTitleAnimation("nakshatra__title--slide-up")
-    const timer3 = setTimeout(() => {
-  setTitleAnimation("nakshatra__title--slide-down")
-  }, 2000)
+  //   const timer3 = setTimeout(() => {
+  // setTitleAnimation("nakshatra__title--slide-down")
+  // }, 2000)
 
   }, 2000)
 
