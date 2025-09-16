@@ -58,13 +58,14 @@ function App() {
       <PremiumFacilities />
       <TestimonialsSection />
       {/* <ContactSection /> */}
-       <EventSignup />
        <Demographics />
+       <EventSignup />
+      
       <footer
         className="animate-fade-up"
-        id="contact"
         style={{
-          backgroundColor: "#273B6791",
+          // backgroundColor: "#273B6791",
+          backgroundColor : "#01040ced",
           color: "#ffffff",
           padding: "60px 20px 40px",
           // marginTop: "60px",
@@ -145,7 +146,7 @@ function App() {
                       transition: "color 0.3s ease",
                     }}
                     onMouseOver={(e) =>
-                      (e.currentTarget.style.color = "#003261")
+                      (e.currentTarget.style.color = "#f8dc87")
                     }
                     onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
                   >
@@ -167,7 +168,7 @@ function App() {
                       transition: "color 0.3s ease",
                     }}
                     onMouseOver={(e) =>
-                      (e.currentTarget.style.color = "#003261")
+                      (e.currentTarget.style.color = "#f8dc87")
                     }
                     onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
                   >
@@ -190,7 +191,7 @@ function App() {
                           transition: "color 0.3s ease",
                         }}
                         onMouseOver={(e) =>
-                          (e.currentTarget.style.color = "#003261")
+                          (e.currentTarget.style.color = "#f8dc87")
                         }
                         onMouseOut={(e) =>
                           (e.currentTarget.style.color = "#ccc")
@@ -235,7 +236,7 @@ function App() {
                     marginBottom: "8px",
                     transition: "color 0.3s ease",
                   }}
-                  onMouseOver={(e) => (e.currentTarget.style.color = "#003261")}
+                  onMouseOver={(e) => (e.currentTarget.style.color = "#f8dc87")}
                   onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
                 >
                   www.evgroup.in
@@ -253,7 +254,7 @@ function App() {
                     marginBottom: "8px",
                     transition: "color 0.3s ease",
                   }}
-                  onMouseOver={(e) => (e.currentTarget.style.color = "#003261")}
+                  onMouseOver={(e) => (e.currentTarget.style.color = "#f8dc87")}
                   onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
                 >
                   +91 82916 68777
@@ -280,7 +281,20 @@ function App() {
                   lineHeight: "1.6",
                 }}
               >
-                <p>
+                <a href="https://www.google.com/maps/place/E.v+Homes/@19.069423,72.9989037,136m/data=!3m1!1e3!4m6!3m5!1s0x3be7c1495dbe19e9:0xefa01ea4da6478f2!8m2!3d19.0691641!4d72.9995863!16s%2Fg%2F1pp2txcmq?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
+                  style={{
+                    color: "#ccc",
+                    textDecoration: "none",
+                    fontSize: "0.9rem",
+                    display: "block",
+                    marginBottom: "8px",
+                    transition: "color 0.3s ease",
+                  }}
+                  onMouseOver={(e) => (e.currentTarget.style.color = "#f8dc87")}
+                  onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
+                >
+                    
+                   <p>
                   212 A wing Vrindavan,
                   <br />
                   Chambers Above Axis Bank,
@@ -289,6 +303,8 @@ function App() {
                   <br />
                   Mumbai
                 </p>
+                </a>
+               
               </div>
             </div>
 
