@@ -1,6 +1,6 @@
 .demographics-section {
   background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(15, 52, 96, 0.9)),
-    url("images/demography_bg.png"); /* replace with your actual image file */
+    url("https://cdn.evhomes.tech/c40a82d0-a5c3-4de2-b904-83e9139efd57-demography_bg.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlbmFtZSI6ImM0MGE4MmQwLWE1YzMtNGRlMi1iOTA0LTgzZTkxMzllZmQ1Ny1kZW1vZ3JhcGh5X2JnLnBuZyIsImlhdCI6MTc1ODExOTE5NH0.Ll1pkQoE7gZGI3Sg5VyjaJ0QbmiKnta_YAH0k_kWIm8"); /* replace with your actual image file */
   background-size: cover;
   background-position: center;
   /* background-attachment: fixed; optional: makes background stay while scrolling */

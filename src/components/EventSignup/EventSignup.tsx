@@ -6,7 +6,8 @@ import "./EventSignup.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { ImLocation2 } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
-import SocialLink from "./SocialLink";
+import SocialLink from "../SocialLink";
+
 
 const EventSignup: React.FC = () => {
   const [formData, setFormData] = useState({
