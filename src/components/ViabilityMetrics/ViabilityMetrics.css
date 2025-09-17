@@ -1,5 +1,5 @@
 .viability-metrics {
-  background: url("images/viability.png") center / cover no-repeat;
+  background: url("https://cdn.evhomes.tech/ba36a71f-96a8-4c25-8377-e6ea24492e45-viability.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlbmFtZSI6ImJhMzZhNzFmLTk2YTgtNGMyNS04Mzc3LWU2ZWEyNDQ5MmU0NS12aWFiaWxpdHkucG5nIiwiaWF0IjoxNzU4MTE4ODIwfQ.QY6ygGMAXxums1i4xfG2xCYYz6AWf4Zcy9duDZ26TeQ") center / cover no-repeat;
   /* Added fallback dark background color */
   background-color: #1a202c;
   padding: 80px 20px;
