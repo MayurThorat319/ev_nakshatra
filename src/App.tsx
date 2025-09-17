@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import NakshatraSection from "./components/NakshatraSection";
+import NakshatraSection from "./components/nakshatra-section/NakshatraSection";
 import ModernWorkspace from "./components/Modernworkspace/ModernWorkspace";
 import PremiumFacilities from "./components/PremiumFacilities/PremiumFacilities";
 import { TestimonialsSection } from "./components/TestimonialsSection/TestimonialsSection";
 import ViabilityMetrics from "./components/ViabilityMetrics/ViabilityMetrics";
 import NakshatraNavbar from "./components/NavBar/NavBar";
-import EventSignup from "./components/EventSignup";
+
 import Demographics from "./components/Demography/demography";
+import EventSignup from "./components/EventSignup/EventSignup";
 
 function App() {
   const [] = useState(0);
