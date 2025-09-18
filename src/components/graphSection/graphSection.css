@@ -1,0 +1,65 @@
+.graph-container {
+  border-radius: 8px;
+  padding: 20px;
+  display: inline-block;
+}
+
+/*  */
+.navi-mumbai-section {
+  /* background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%); */
+  background: #00121e;
+  color: white;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.axis-title {
+  color: white;
+}
+
+.content-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* for chart */
+.chart-container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  /* background: #fff; */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.girdmain {
+  display: none;
+}
+
+.chart-container h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
