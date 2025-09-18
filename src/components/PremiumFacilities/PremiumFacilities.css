@@ -5,7 +5,7 @@
 
 .section-wrapper {
   position: relative;
-  height: 500vh; 
+  height: 500vh;
 }
 
 .premium-facilities-header {
@@ -22,7 +22,7 @@
   letter-spacing: 4%;
   text-align: start;
   padding: 0rem 2rem;
-  -webkit-text-stroke: 1px ;
+  -webkit-text-stroke: 1px;
 }
 
 .facility-section {
@@ -96,7 +96,7 @@
   margin-bottom: 2rem;
   position: relative;
   display: inline-block;
-  height: 100px;         
+  height: 100px;
   line-height: 100px;
   overflow: hidden;
 }
@@ -105,11 +105,11 @@
   display: flex;
   flex-direction: column;
   transform: translateY(0);
-  transition: transform 0.6s cubic-bezier(.16,1,.3,1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .heading-text span {
-  height: 100px;   /* 👈 same as font-size */
+  height: 100px; /* 👈 same as font-size */
   line-height: 50px;
   display: block;
 }
@@ -117,8 +117,6 @@
 .facility-heading:hover .heading-text {
   transform: translateY(-100px); /* 👈 shift by the exact text height */
 }
-
-
 
 .facility-text-container {
   max-width: 38rem;
@@ -134,23 +132,23 @@
 }
 
 .facility-divider {
-   --width-of-loader: 2px;   /* thin vertical line */
-  --loader-color: #ffffff;  /* glowing white */
+  --width-of-loader: 2px; /* thin vertical line */
+  --loader-color: #ffffff; /* glowing white */
   width: var(--width-of-loader);
-  height: 100px;             /* adjust vertical length */
+  height: 100px; /* adjust vertical length */
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.3);
   position: relative;
-  margin: 1rem auto;        /* center it */
+  margin: 1rem auto; /* center it */
 }
 
 .facility-divider::before {
-   content: "";
+  content: "";
   position: absolute;
   background: var(--loader-color);
   top: 0;
   left: 0;
-  width: 100%;              /* full width (since vertical) */
+  width: 100%; /* full width (since vertical) */
   height: 0%;
   border-radius: 30px;
   animation: moving-vertical 1.5s ease-in-out infinite;
@@ -167,9 +165,8 @@
   }
 }
 
-
 .facility-tagline {
-  --color: #fff;  /* hover overlay color */
+  --color: #fff; /* hover overlay color */
   --color2: rgb(10, 25, 30); /* hover text color */
   position: relative;
   display: inline-block;
@@ -177,21 +174,21 @@
   font-size: 14px;
   letter-spacing: 0.05em;
   opacity: 0.9;
-  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  font-family: "Roboto", "Segoe UI", sans-serif;
   text-transform: uppercase;
   color: var(--color);
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.6);          /* 🔹 default background */
-  border-radius: 20px;    
-     /* rectangle with slightly rounded edges */
+  background: rgba(0, 0, 0, 0.6); /* 🔹 default background */
+  border-radius: 20px;
+  /* rectangle with slightly rounded edges */
 }
 
 /* animated overlay layers */
 .facility-tagline::after,
 .facility-tagline::before {
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   width: 100%;
@@ -200,7 +197,7 @@
   inset: 50%;
   left: 25%;
   z-index: -1;
-  transition: .5s ease-out;
+  transition: 0.5s ease-out;
   background-color: var(--color);
   border-radius: 6px; /* keep shape consistent */
 }
@@ -225,44 +222,41 @@
 }
 
 .facility-tagline:active {
-  filter: brightness(.7);
-  transform: scale(.98);
+  filter: brightness(0.7);
+  transform: scale(0.98);
 }
-
 
 /* Responsive styles */
 @media (min-width: 768px) {
+  .facility-heading {
+    font-family: "Italiana", serif;
+    font-size: 100px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    overflow: hidden;
+  }
 
-.facility-heading {
-  font-family: "Italiana", serif;
-  font-size: 100px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  margin-bottom: 2rem;
-  position: relative;
-  display: inline-block;
-  height: 100px;         
-  line-height: 100px;
-  overflow: hidden;
-}
+  .heading-text {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
 
-.heading-text {
-  display: flex;
-  flex-direction: column;
-  transform: translateY(0);
-  transition: transform 0.6s cubic-bezier(.16,1,.3,1);
-}
+  .heading-text span {
+    height: 100px; /* 👈 same as font-size */
+    line-height: 100px;
+    display: block;
+  }
 
-.heading-text span {
-  height: 100px;   /* 👈 same as font-size */
-  line-height: 100px;
-  display: block;
-}
-
-.facility-heading:hover .heading-text {
-  transform: translateY(-100px); /* 👈 shift by the exact text height */
-}
-
+  .facility-heading:hover .heading-text {
+    transform: translateY(-100px); /* 👈 shift by the exact text height */
+  }
 
   .facility-description {
     font-family: "Jura";
@@ -273,89 +267,173 @@
   }
 }
 
+@media (min-width: 616px) and (max-width: 767px) {
+  .heading-text span .text-hover {
+    display: none;
+  }
+
+.text-original-1{
+font-size: 7vw;
+}
+
+  .text-animaated {
+    font-size: 0px;
+  }
+  .premium-facilities-title {
+    font-family: "Italiana", serif;
+    font-size: 9vw;
+    font-weight: 400;
+    color: #1f2937;
+    letter-spacing: 0.05em;
+    text-align: start;
+    padding: 0rem 2rem;
+  }
+  .facility-heading {
+    font-family: "Italiana", serif;
+    font-size: 10vw;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin-bottom: 0rem;
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    overflow: visible;
+    -webkit-text-stroke: 1px;
+  }
+  .facility-description {
+    font-family: "Jura";
+    font-weight: 400;
+    font-size: 6vw;
+    line-height: 100%;
+    margin-bottom: 1rem;
+  }
+  .facility-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    top: 20%;
+    margin-top: 0%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    padding: 0 1rem;
+  }
+  .facility-heading:hover .heading-text {
+    display: none;
+  }
+  .facility-tagline {
+    --color: #fff; /* hover overlay color */
+    --color2: rgb(10, 25, 30); /* hover text color */
+    position: relative;
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+    font-family: "Roboto", "Segoe UI", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: none;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6); /* 🔹 default background */
+    border-radius: 20px;
+    margin-top: 15vw; /* rectangle with slightly rounded edges */
+
+    border: 1.5px solid #fff;
+  }
+
+  .facility-tagline::after,
+  .facility-tagline::before {
+    display: none;
+  }
+
+  .facility-tagline:hover {
+    display: none;
+  }
+}
+
 @media (max-width: 615px) {
+  .heading-text span .text-hover {
+    display: none;
+  }
+  .text-animaated {
+    font-size: 0px;
+  }
+  .premium-facilities-title {
+    font-family: "Italiana", serif;
+    font-size: 9vw;
+    font-weight: 400;
+    color: #1f2937;
+    letter-spacing: 0.05em;
+    text-align: start;
+    padding: 0rem 2rem;
+  }
+  .facility-heading {
+    font-family: "Italiana", serif;
+    font-size: 10vw;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin-bottom: 0rem;
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    overflow: visible;
+    -webkit-text-stroke: 1px;
+  }
+  .facility-description {
+    font-family: "Jura";
+    font-weight: 400;
+    font-size: 6vw;
+    line-height: 100%;
+    margin-bottom: 1rem;
+  }
+  .facility-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    top: 20%;
+    margin-top: 0%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    padding: 0 1rem;
+  }
+  .facility-heading:hover .heading-text {
+    display: none;
+  }
+  .facility-tagline {
+    --color: #fff; /* hover overlay color */
+    --color2: rgb(10, 25, 30); /* hover text color */
+    position: relative;
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+    font-family: "Roboto", "Segoe UI", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: none;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6); /* 🔹 default background */
+    border-radius: 20px;
+    margin-top: 15vw; /* rectangle with slightly rounded edges */
 
+    border: 1.5px solid #fff;
+  }
 
+  .facility-tagline::after,
+  .facility-tagline::before {
+    display: none;
+  }
 
-.heading-text span .text-hover{
-display: none;
-}
-.text-animaated{
-  font-size: 0px;
-}
-.premium-facilities-title {
-  font-family: "Italiana", serif;
-  font-size: 9vw;
-  font-weight: 400;
-  color: #1f2937;
-  letter-spacing: 0.05em;
-  text-align: start;
-  padding: 0rem 2rem;
-}
-.facility-heading {
-  font-family: "Italiana", serif;
-  font-size: 10vw;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  margin-bottom: 0rem;
-  position: relative;
-  display: inline-block;
-  height: 100px;         
-  line-height: 100px;
-  overflow: visible;
-  -webkit-text-stroke: 1px; 
-}
-.facility-description {
-  font-family: "Jura";
-  font-weight: 400;
-  font-size: 6vw;
-  line-height: 100%;
-  margin-bottom: 1rem;
-}
-.facility-content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  top: 20%;
-  margin-top: 0%;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  color: white;
-  padding: 0 1rem;
-}
-.facility-heading:hover .heading-text{
-  display: none;
-}
-.facility-tagline {
-  --color: #fff;  /* hover overlay color */
-  --color2: rgb(10, 25, 30); /* hover text color */
-  position: relative;
-  display: inline-block;
-  padding: 0.4em 0.8em;
-  font-size: 12px;
-  letter-spacing: 0.05em;
-  opacity: 0.9;
-  font-family: 'Roboto', 'Segoe UI', sans-serif;
-  text-transform: uppercase;
-  color: white;
-  cursor: pointer;
-  transition: none;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.6);          /* 🔹 default background */
-  border-radius: 20px; 
-  margin-top: 15vw;          /* rectangle with slightly rounded edges */
-
-  border: 1.5px solid #fff;
-}
-
-.facility-tagline::after,
-.facility-tagline::before {
-  display: none;
-}
-
-.facility-tagline:hover{
-  display: none;
-}
-
+  .facility-tagline:hover {
+    display: none;
+  }
 }
