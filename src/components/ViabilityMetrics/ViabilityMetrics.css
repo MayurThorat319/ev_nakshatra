@@ -267,9 +267,14 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
+  .metric-description {
+
+  padding: 0 1px;
+}
+
 
   .metric-card {
     height: 260px;
@@ -294,15 +299,12 @@
     gap: 25px;
   }
 
-  .viability-metrics {
-    padding: 60px 20px 60px 60px;
-      background-color: #1a202c;
-  min-height: 100vh;
-  display:block;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  }
+
+.location-section {
+
+width: 90%;
+
+}
 
 
   .metric-card {
@@ -346,7 +348,7 @@
   animation-delay: 0.6s;
 }
 
-@media screen and (max-width:1075px){
+/* @media screen and (max-width:1075px){
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
@@ -373,9 +375,9 @@
   padding: 0 10px;
 }
 
-}
+} */
 
-@media screen and (max-width:986px){
+@media screen  and (max-width:615px){
 .metrics-container {
     display: none;
 }
@@ -384,7 +386,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-width: 100%;
+width: 79vw;
   min-height: 100vh;
   font-family: "Arial", sans-serif;
 }
@@ -428,7 +430,7 @@ width: 100%;
 /* Added separate dark circle container for icon */
 .location-icon-circle {
   position: absolute;
-  left: -40px;
+  left: -25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -526,6 +528,11 @@ text-align: center;
 }
 
 /* Responsive design */
+
+
+}
+/* Responsive design */
+/* 
 @media (max-width: 768px) {
   .location-section {
     gap: 12px;
@@ -535,7 +542,6 @@ text-align: center;
     gap: 16px;
   }
 
-  /* Updated responsive sizes for new icon circle */
  
   .location-icon {
     width: 35px;
@@ -555,9 +561,4 @@ text-align: center;
   .location-description {
     font-size: 13px;
   }
-}
-
-}
-/* Responsive design */
-
-
+} */

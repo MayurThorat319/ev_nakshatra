@@ -34,8 +34,8 @@ function App() {
   return (
     <div className="main-bg">
       <NakshatraNavbar />
-       <div className="parallaxcontainer">
-        <div className={`parallaxItem upcoming ${showLive ? "moveUp" : ""}`}>
+      <div className="parallaxcontainer">
+        <div className={`parallaxItem-one upcoming ${showLive ? "moveUp" : ""}`}>
           <NakshatraSection />
         </div>
         <div className={`parallaxItem liveproject ${showLive ? "showLive" : ""}`}>
@@ -43,7 +43,7 @@ function App() {
         </div>
 
       </div>
-             <ViabilityMetrics />
+      <ViabilityMetrics />
       {/* <NakshatraSection />
       <div className="parallaxcontainer">
         <div className={`parallaxItem upcoming ${showLive ? "moveUp" : ""}`}>
@@ -58,14 +58,14 @@ function App() {
       <PremiumFacilities />
       <TestimonialsSection />
       {/* <ContactSection /> */}
-       <Demographics />
-       <EventSignup />
-      
+      <Demographics />
+      <EventSignup />
+
       <footer
         className="animate-fade-up"
         style={{
           // backgroundColor: "#273B6791",
-          backgroundColor : "#01040ced",
+          backgroundColor: "#01040ced",
           color: "#ffffff",
           padding: "60px 20px 40px",
           // marginTop: "60px",
@@ -293,18 +293,18 @@ function App() {
                   onMouseOver={(e) => (e.currentTarget.style.color = "#f8dc87")}
                   onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
                 >
-                    
-                   <p>
-                  212 A wing Vrindavan,
-                  <br />
-                  Chambers Above Axis Bank,
-                  <br />
-                  sector-17, Vashi Navi
-                  <br />
-                  Mumbai
-                </p>
+
+                  <p>
+                    212 A wing Vrindavan,
+                    <br />
+                    Chambers Above Axis Bank,
+                    <br />
+                    sector-17, Vashi Navi
+                    <br />
+                    Mumbai
+                  </p>
                 </a>
-               
+
               </div>
             </div>
 

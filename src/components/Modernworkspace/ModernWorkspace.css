@@ -26,8 +26,10 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  
   gap: 10px;
   margin-right: 3vw;
+  
 }
 
 .cs-card--back {
@@ -88,7 +90,7 @@
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 615px) {
   .mw__inner {
     flex-direction: row;
     align-items: center;
@@ -172,9 +174,31 @@
        padding-right: 40px;
   } */
 }
+@media screen and (max-width: 977px) and (min-width: 768px) {
+  .mw__title {
+  font-family: "Italiana", serif;
+  font-weight: 400;
+  letter-spacing: 4%;
+  line-height: 100%;
+  font-size: 7vw;
+}
+.mw__text {
+    font-family: "Jura";
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #6b7280;
+    letter-spacing: 10%;
+    text-align: left;
+}
+    .mw__copy {
+        flex: 0 0 43%;
+        padding-left: 20px;
+    }
+    
+}
 
-
-@media (max-width: 615px) {
+@media (max-width: 768px) {
   /* html,body{
     margin: 0;
     padding: 0;

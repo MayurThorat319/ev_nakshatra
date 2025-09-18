@@ -58,6 +58,7 @@
   height: 200vh; 
     overflow: visible;
 }
+.parallaxItem-one ,
 .parallaxItem {
   position: absolute;
   width: 100%;
@@ -87,12 +88,13 @@
   z-index: 3;
 }
 
-@media (max-width: 615px) {
+@media (max-width: 768px) {
+ 
   .parallaxcontainer {
     height: auto; /* prevent extra scroll space */
     overflow: visible;
   }
-
+  .parallaxItem-one ,
   .parallaxItem {
     position: relative;
     transform: none !important;
@@ -100,7 +102,9 @@
     transition: none !important;
     height: auto; /* let content define its height */
   }
-
+.parallaxItem-one {
+  height: 100vh;
+}
   /* optional: reset z-index so they stack normally */
   .upcoming, 
   .liveproject {
