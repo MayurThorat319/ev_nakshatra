@@ -1,8 +1,12 @@
 import type React from "react";
 import "./demography.css";
+import { IoHomeOutline } from "react-icons/io5";
+import type { ReactNode } from "react";
+import { BsBuildings } from "react-icons/bs";
+import { MdOutlineMedicalServices } from "react-icons/md";
 
 interface DemographicItem {
-  icon: string;
+  icon: ReactNode;
   title: string;
   description: string;
   presentValue: string;
@@ -14,7 +18,7 @@ interface DemographicItem {
 const Demographics: React.FC = () => {
   const demographicData: DemographicItem[] = [
     {
-      icon: "🏠",
+      icon: <IoHomeOutline />,
       title: "HNI Population",
       description:
         "Vashi Boasts of High End and High Value Homes which translates to more High Net Worth Homebuyers Moving into Vashi, and Upcoming Projects and Further Migration of High Net Worth Individuals in to Vashi would make it one of the single Largest Aggregation of High Net Worth Individuals in One locality.",
@@ -24,7 +28,7 @@ const Demographics: React.FC = () => {
       futureProgress: 100,
     },
     {
-      icon: "🏢",
+      icon: <BsBuildings />,
       title: "UHNI Population",
       description: "",
       presentValue: "800+",
@@ -33,7 +37,7 @@ const Demographics: React.FC = () => {
       futureProgress: 100,
     },
     {
-      icon: "👨‍⚕️",
+      icon: <MdOutlineMedicalServices />,
       title: "DOCTORS",
       description: "",
       presentValue: "2500+",

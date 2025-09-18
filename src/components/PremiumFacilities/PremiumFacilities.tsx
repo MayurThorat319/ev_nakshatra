@@ -82,7 +82,7 @@ const PremiumFacilities = () => {
           <div className="facility-content">
             <p className="facility-heading">
               <span className="heading-text">
-                <span className="text-original">GRAND ARRIVAL LOBBY</span>
+                <span className="text-original-1">GRAND ARRIVAL LOBBY</span>
                 <span className={`${"text-hover"} ${"text-animaated"} `}>GRAND ARRIVAL LOBBY</span>
               </span>
             </p>
@@ -113,7 +113,7 @@ const PremiumFacilities = () => {
           <div className="facility-content">
             <p className="facility-heading">
               <span className="heading-text">
-                <span className="text-original">CURATED CAFETERIA</span>
+                <span className="text-original-1">CURATED CAFETERIA</span>
                 <span className={`${"text-hover"} ${"text-animaated"} `}>CURATED CAFETERIA</span>
               </span>
             </p>
@@ -173,7 +173,7 @@ const PremiumFacilities = () => {
           <div className="facility-content">
             <p className="facility-heading">
               <span className="heading-text">
-                <span className="text-original">MEDICAL ACCESS LIFT</span>
+                <span className="text-original-1">MEDICAL ACCESS LIFT</span>
                 <span className={`${"text-hover"} ${"text-animaated"} `}>MEDICAL ACCESS LIFT</span>
               </span>
             </p>
