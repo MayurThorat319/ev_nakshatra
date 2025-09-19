@@ -11,7 +11,7 @@
 }
 
 .demographics-container {
-  max-width: 1200px;
+  max-width: 3000px;
   margin: 0 auto;
 }
 
@@ -246,8 +246,17 @@
     gap: 10px;
   }
 } */
-@media (min-width: 616px) and (max-width: 1024px) {
-  .demographics-subtitle {
-    font-size: 3vw;
-  }
+@media (min-width: 616px) and (max-width: 3000px) {
+
+.demographics-title {
+  font-family: "Italiana", serif;
+  font-size: 5vw;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* margin-bottom: 20px; */
+  letter-spacing: 8px;
 }
+  }

@@ -1,5 +1,6 @@
 import type React from "react";
 import "./graphSection.css";
+import "../../../public/images/contact.png"
 import {
   BarChart,
   Bar,
@@ -24,7 +25,7 @@ const CustomGraph: React.FC = () => {
 
   // Responsive settings based on device type
   const barSize = dimn === "mobile" ? 30 : dimn === "tablet" ? 40 : 80;
-  const chartHeight = dimn === "mobile" ? 300 : dimn === "tablet" ? 400 : 400;
+  const chartHeight = dimn === "mobile" ? 300 : dimn === "tablet" ? 400 : 400  ;
   const chartWidth =
     dimn === "mobile" ? "80%" : dimn === "tablet" ? "50%" : "50%";
   const tickFontSize = dimn === "mobile" ? 10 : 14;
@@ -80,7 +81,7 @@ const CustomGraph: React.FC = () => {
           <ResponsiveContainer width={chartWidth} height={chartHeight} style={{margin:" 0 auto"}}>
             <BarChart
               data={data}
-              margin={{ top: 20, right: 30, left: 0, bottom: 50 }}
+              margin={{ top: 70, right: 30, left: 0, bottom: 50 }}
               barCategoryGap={categoryGap}
               barGap={0}
             >
