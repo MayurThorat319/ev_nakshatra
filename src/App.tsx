@@ -9,17 +9,11 @@ import NakshatraNavbar from "./components/NavBar/NavBar";
 
 import Demographics from "./components/Demography/demography";
 import EventSignup from "./components/EventSignup/EventSignup";
-import graphSection from "./components/EventSignup/EventSignup";
-import NaviMumbaiSection from "./components/graphSection/graphSection";
+
 import CustomGraph from "./components/graphSection/graphSection";
 
 function App() {
-const sampleData = [
-  { x: 2025, barValue: 5000, lineValue: 5000 },
-  { x: 2026, barValue: 10000, lineValue: 10000 },
-  { x: 2027, barValue: 15000, lineValue: 15000 },
-  { x: 2028, barValue: 20000, lineValue: 20000 },
-]
+
 
   const [] = useState(0);
   const [showLive, setShowLive] = useState(false);

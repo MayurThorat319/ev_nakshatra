@@ -31,6 +31,7 @@
   margin-bottom: 40px;
   line-height: 1.3;
   letter-spacing: -0.02em;
+  color:#f8dc87 ;
 }
 
 .description {
@@ -47,7 +48,7 @@
 /* for chart */
 .chart-container {
   width: 100%;
-  margin: 20px auto;
+  /* margin: 20px auto; */
   padding: 15px;
   /* background: #fff; */
   border-radius: 12px;
@@ -59,7 +60,14 @@
 }
 
 .chart-container h2 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 20px;
   color: #333;
 }
+
+@media screen and (max-width:615px){
+  .main-title{
+    font-size: 5vw;
+  }
+}
+
