@@ -25,9 +25,9 @@ const CustomGraph: React.FC = () => {
 
   // Responsive settings based on device type
   const barSize = dimn === "mobile" ? 30 : dimn === "tablet" ? 40 : 80;
-  const chartHeight = dimn === "mobile" ? 300 : dimn === "tablet" ? 400 : 400  ;
+  const chartHeight = dimn === "mobile" ? 350 : dimn === "tablet" ? 400 : 400  ;
   const chartWidth =
-    dimn === "mobile" ? "80%" : dimn === "tablet" ? "50%" : "50%";
+    dimn === "mobile" ? "100%" : dimn === "tablet" ? "50%" : "50%";
   const tickFontSize = dimn === "mobile" ? 10 : 14;
   const categoryGap = dimn === "mobile" ? "15%" : "0%";
 
@@ -35,6 +35,7 @@ const CustomGraph: React.FC = () => {
   if (active && payload && payload.length) {
     return (
       <div
+      className="infoContainer"
         style={{
           backgroundColor: "#0d1b2a",
           border: "1px solid #00e0ee",
@@ -81,7 +82,7 @@ const CustomGraph: React.FC = () => {
           <ResponsiveContainer width={chartWidth} height={chartHeight} style={{margin:" 0 auto"}}>
             <BarChart
               data={data}
-              margin={{ top: 70, right: 30, left: 0, bottom: 50 }}
+              margin={{ top: 10, right: 30, left: 0, bottom: 50 }}
               barCategoryGap={categoryGap}
               barGap={0}
             >
@@ -135,20 +136,21 @@ const CustomGraph: React.FC = () => {
               </defs>
 
               <YAxis
+            tickSize={5}
                 stroke="#fff"
                 axisLine={{ stroke: "#fff", markerStart: "url(#arrowhead-up)" }}
                 tick={{ fill: "#fff", fontSize: tickFontSize }}
                 label={{
                   value: "Price per sq ft",
                   angle: -90,
-                  dx: 0,
+                  dx: 5,
                   position: "insideLeft",
                   style: { textAnchor: "middle", fill: "#fff", fontSize: 16 },
                 }}
               />
 
               <Tooltip
-                cursor={{ fill: "rgba(0, 224, 238, 0.2)" }}
+                cursor={false}
              content={CustomTooltip}
               />
 

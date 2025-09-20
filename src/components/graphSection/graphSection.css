@@ -9,6 +9,7 @@
   
 }
 
+
 /*  */
 .navi-mumbai-section {
   background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
@@ -38,16 +39,18 @@
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 40px;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  word-spacing: -0.3em;
   color:#f8dc87 ;
   display: flex;
   justify-content: center;
   align-items: center;
+    font-family: "Italiana", serif;;
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1.5vw;
   line-height: 1.6;
   margin-bottom: 60px;
   max-width: 1000px;
@@ -55,6 +58,7 @@
   margin-right: auto;
   opacity: 0.9;
   font-weight: 300;
+  font-family: Jura;
 }
 
 /* for chart */
@@ -67,6 +71,10 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
+.chart-container :focus {
+  outline: none;
+
+}
 .girdmain {
   display: none;
 }
@@ -78,10 +86,70 @@
 }
 
 @media screen and (max-width:615px){
+ 
   .main-title{
-    font-size: 5vw;
+    font-size: 5.5vw;
   }
+  .infoContainer{
+    font-size: 3vw;
+  }
+  
+.description {
+  font-size: 4vw;
+  line-height: 1.6;
+  margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  font-weight: 300;
+  font-family: Jura;
 }
+.navi-mumbai-section {
+  background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
+  background: #00121e;
+  color: white;
+  padding: 20px 20px;
+  min-height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+}
+@media screen and (min-width:616px) and  (max-width:1000px){
+    .main-title{
+    font-size:4vw;
+  }
+  .infoContainer{
+    font-size: 3vw;
+  }
+  
+.description {
+  font-size: 2vw;
+  line-height: 1.6;
+  margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  font-weight: 300;
+  font-family: Jura;
+}
+.navi-mumbai-section {
+  background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
+  background: #00121e;
+  color: white;
+  padding: 20px 20px;
+  min-height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+}
+
+
+
 @media screen and (min-width:1250px) and  (max-width:1900px){
   body{
     width: 100%;
