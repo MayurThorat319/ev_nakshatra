@@ -1,6 +1,6 @@
 import type React from "react";
 import "./graphSection.css";
-import "../../../public/images/contact.png"
+// import "../../../public/images/contact.png"
 import {
   BarChart,
   Bar,

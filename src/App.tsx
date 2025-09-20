@@ -68,7 +68,7 @@ function App() {
         className="animate-fade-up"
         style={{
           // backgroundColor: "#273B6791",
-          backgroundColor : "#01040ced",
+          backgroundColor: "#01040ced",
           color: "#ffffff",
           padding: "60px 20px 40px",
           // marginTop: "60px",
