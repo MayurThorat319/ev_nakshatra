@@ -261,7 +261,7 @@
 
 .social-icons {
   position: absolute;
-  right: -3rem;
+  right: -4rem;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -401,4 +401,11 @@
   .event-signup__form-title {
     font-size: 2rem;
   }
+}
+@media (max-width: 1330px) and (min-width: 769px) {
+
+.event-signup {
+
+  padding: 2rem 4.5rem 2rem 2rem;
+}
 }
