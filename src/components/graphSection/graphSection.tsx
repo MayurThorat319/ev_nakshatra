@@ -19,6 +19,7 @@ const data = [
   { name: "2027", Price: 15000 },
   { name: "2028", Price: 20000 },
 ];
+const isMobile = window.innerWidth <=600
 
 const CustomGraph: React.FC = () => {
   const dimn = useDimention();
@@ -29,7 +30,7 @@ const CustomGraph: React.FC = () => {
   const chartWidth =
     dimn === "mobile" ? "100%" : dimn === "tablet" ? "50%" : "50%";
   const tickFontSize = dimn === "mobile" ? 10 : 14;
-  const categoryGap = dimn === "mobile" ? "15%" : "0%";
+  const categoryGap = dimn === "mobile" ? "15%" : "15%";
 
   const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
@@ -82,7 +83,7 @@ const CustomGraph: React.FC = () => {
           <ResponsiveContainer width={chartWidth} height={chartHeight} style={{margin:" 0 auto"}}>
             <BarChart
               data={data}
-              margin={{ top: 10, right: 30, left: 0, bottom: 50 }}
+              margin={{ top: 10, right: 30, left: 10, bottom: 50 }}
               barCategoryGap={categoryGap}
               barGap={0}
             >
@@ -141,10 +142,11 @@ const CustomGraph: React.FC = () => {
                 axisLine={{ stroke: "#fff", markerStart: "url(#arrowhead-up)" }}
                 tick={{ fill: "#fff", fontSize: tickFontSize }}
                 label={{
+                  
                   value: "Price per sq ft",
-                  angle: -90,
-                  dx: 5,
-                  position: "insideLeft",
+                  angle: -90, 
+                  dx: isMobile ?-20:-35,
+                  position: "outsideLeft",
                   style: { textAnchor: "middle", fill: "#fff", fontSize: 16 },
                 }}
               />
