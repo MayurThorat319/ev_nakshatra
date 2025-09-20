@@ -10,7 +10,11 @@ import NakshatraNavbar from "./components/NavBar/NavBar";
 import Demographics from "./components/Demography/demography";
 import EventSignup from "./components/EventSignup/EventSignup";
 
+import CustomGraph from "./components/graphSection/graphSection";
+
 function App() {
+
+
   const [] = useState(0);
   const [showLive, setShowLive] = useState(false);
 
@@ -42,6 +46,7 @@ function App() {
 
       </div>
              <ViabilityMetrics />
+              <CustomGraph />
       {/* <NakshatraSection />
       <div className="parallaxcontainer">
         <div className={`parallaxItem upcoming ${showLive ? "moveUp" : ""}`}>

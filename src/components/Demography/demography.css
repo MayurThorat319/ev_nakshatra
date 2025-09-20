@@ -1,6 +1,6 @@
 .demographics-section {
   background: linear-gradient(rgba(26, 26, 46, 0.5), rgba(15, 52, 96, 0.5)),
-    url("https://cdn.evhomes.tech/c40a82d0-a5c3-4de2-b904-83e9139efd57-demography_bg.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlbmFtZSI6ImM0MGE4MmQwLWE1YzMtNGRlMi1iOTA0LTgzZTkxMzllZmQ1Ny1kZW1vZ3JhcGh5X2JnLnBuZyIsImlhdCI6MTc1ODExOTE5NH0.Ll1pkQoE7gZGI3Sg5VyjaJ0QbmiKnta_YAH0k_kWIm8"); /* replace with your actual image file */
+    url("https://cdn.evhomes.tech/88d131f0-7584-4260-a554-b818aea73720-demography_new.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlbmFtZSI6Ijg4ZDEzMWYwLTc1ODQtNDI2MC1hNTU0LWI4MThhZWE3MzcyMC1kZW1vZ3JhcGh5X25ldy5qcGVnIiwiaWF0IjoxNzU4MTkwNjU5fQ.CRWqdk1kEqPMZCpjvuTJ-hfVCq5LpDCns-R24xI2DP0"); /* replace with your actual image file */
   background-size: cover;
   background-position: center;
   /* background-attachment: fixed; optional: makes background stay while scrolling */
@@ -11,7 +11,7 @@
 }
 
 .demographics-container {
-  max-width: 1200px;
+  max-width: 3000px;
   margin: 0 auto;
 }
 
@@ -19,7 +19,8 @@
   font-family: "Italiana", serif;
   font-size: 5vw;
   font-weight: bold;
-  text-align: center;
+  
+  
   margin-bottom: 20px;
   letter-spacing: 8px;
 }
@@ -181,9 +182,8 @@
 
 /* Responsive Design */
 @media (max-width: 615px) {
-
   .demographics-subtitle {
-  font-size: 4vw;
+    font-size: 4vw;
   }
   .demographic-content {
     flex: 1;
@@ -246,8 +246,17 @@
     gap: 10px;
   }
 } */
-@media (min-width: 616px) and (max-width: 1024px) {
-  .demographics-subtitle {
-  font-size: 3vw;
-  }
+@media (min-width: 616px) and (max-width: 3000px) {
+
+.demographics-title {
+  font-family: "Italiana", serif;
+  font-size: 5vw;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* margin-bottom: 20px; */
+  letter-spacing: 8px;
 }
+  }
