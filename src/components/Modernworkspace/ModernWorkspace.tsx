@@ -6,7 +6,7 @@ import CarouselStack from "../CarouselStack/CarouselStack";
 
 const images: CarouselImage[] = [
   {
-    src: "/images/carousel_4.png", // file in public/images/rooftop.png
+    src: "/images/carousel_4_1.png", // file in public/images/rooftop.png
     alt: "Rooftop lounge at sunset with city views and fireworks in the sky",
   },
   {
@@ -14,7 +14,7 @@ const images: CarouselImage[] = [
     alt: "Open modern office with large windows and desks",
   },
   {
-    src: "/images/carousel_5.png",  // file in public/images/skyline.png
+    src: "/images/carousel_5_1.png",  // file in public/images/skyline.png
     alt: "Evening skyline with illuminated towers and glass facades",
   },
 ];

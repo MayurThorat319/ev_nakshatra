@@ -8,6 +8,10 @@
   height: 500vh;
 }
 
+.premium-facilities {
+  margin-bottom: 10px; /* adjust as needed */
+}
+
 .premium-facilities-header {
   text-align: center;
   padding: 0rem 0;

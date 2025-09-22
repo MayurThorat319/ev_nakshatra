@@ -40,7 +40,7 @@ const PremiumFacilities = () => {
         {/* Parking Zone Section */}
         <div className="facility-section" ref={(el) => {sectionRefs.current[0] = el}}>
           <img
-            src="/images/parking.png"
+            src="/images/parking_1.png"
             alt="Modern parking garage"
             className="facility-image"
           />
@@ -71,7 +71,7 @@ const PremiumFacilities = () => {
         {/* Grand Arrival Lobby Section */}
         <div className="facility-section" ref={(el) => {sectionRefs.current[1] = el}}>
           <img
-            src="/images/lobby.png"
+            src="/images/lobby_1.png"
             alt="Grand arrival lobby"
             className="facility-image"
           />
@@ -102,7 +102,7 @@ const PremiumFacilities = () => {
         {/* Cafe Section */}
         <div className="facility-section" ref={(el) => {sectionRefs.current[2] = el}}>
           <img
-            src="/images/cafe.png"
+            src="/images/cafe_1.png"
             alt="Curated cafeteria"
             className="facility-image"
           />
@@ -133,7 +133,7 @@ const PremiumFacilities = () => {
         {/* Security Section */}
         <div className="facility-section" ref={(el) => {sectionRefs.current[3] = el}}>
           <img
-            src="/images/security.png"
+            src="/images/security_1.png"
             alt="Curated cafeteria"
             className="facility-image"
           />
@@ -162,7 +162,7 @@ const PremiumFacilities = () => {
         {/* Lift Section */}
         <div className="facility-section" ref={(el) => {sectionRefs.current[4] = el}}>
           <img
-            src="/images/maintainence.png"
+            src="/images/maintainence_1.png"
             alt="Curated cafeteria"
             className="facility-image"
           />
