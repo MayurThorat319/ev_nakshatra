@@ -62,13 +62,16 @@ const Demographics: React.FC = () => {
         <div className="demographics-stats">
           {demographicData.map((item, index) => (
             <div key={index} className="demographic-item">
+              <div className="icon-text-main">
               <div className="demographic-icon">
                 <span className="icon">{item.icon}</span>
               </div>
 
               <div className="demographic-content">
                 <h3 className="demographic-title-item">{item.title}</h3>
-
+              </div>
+              </div>
+              <div className="main-demographic-values">
                 <div className="demographic-values">
                   <div className="value-badges">
                     <span className="badge present">Present</span>
@@ -96,14 +99,14 @@ const Demographics: React.FC = () => {
                     ></div>
                   </div>
                 </div>
+              </div>
 
-                {/* <div className="value-labels">
+              {/* <div className="value-labels">
                   <div className="label-group">
                     <span className="label present-label">Present</span>
                     <span className="label future-label">Near Future</span>
                   </div>
                 </div> */}
-              </div>
             </div>
           ))}
         </div>

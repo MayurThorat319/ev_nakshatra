@@ -6,7 +6,7 @@ import CarouselStack from "../CarouselStack/CarouselStack";
 
 const images: CarouselImage[] = [
   {
-    src: "/images/carousel_1.png", // file in public/images/rooftop.png
+    src: "/images/carousel_4.png", // file in public/images/rooftop.png
     alt: "Rooftop lounge at sunset with city views and fireworks in the sky",
   },
   {
@@ -14,7 +14,7 @@ const images: CarouselImage[] = [
     alt: "Open modern office with large windows and desks",
   },
   {
-    src: "/images/carousel_3.png",  // file in public/images/skyline.png
+    src: "/images/carousel_5.png",  // file in public/images/skyline.png
     alt: "Evening skyline with illuminated towers and glass facades",
   },
 ];
@@ -56,13 +56,13 @@ const ModernWorkspaceSection: React.FC = () => {
 
           <p className="mw__text">
             Big ideas need bold spaces. At{" "}
-            <span style={{ color: "#1E576C" }}>CAPITOL 9</span>, every square
+            <span style={{ color: "#1E576C", WebkitTextStroke: "0.7px" }}>CAPITOL 9</span>, every square
             foot is crafted for visionaries, leaders, and creators ready to turn
             ambition into action. Elegant layouts, curated amenities, and
             flexible design — all in one place. Whether you’re scaling up or
             settling in, this is <br />
             <a href="#">
-              <span style={{ color: "#1E576C" }}>
+              <span style={{ color: "#1E576C", WebkitTextStroke: "0.7px",  }}>
                 where your next chapter begins.
               </span>
             </a>
@@ -72,7 +72,7 @@ const ModernWorkspaceSection: React.FC = () => {
             Great ideas deserve striking environments. At CAPITOL 9, every inch
             is thoughtfully designed. Whether you're scaling up or settling in,
             this is <br />
-            <span style={{ color: "#1E576C" }}>
+            <span style={{ color: "#1E576C", WebkitTextStroke: "0.7px",  }}>
               where your next chapter begins.
             </span>
           </p>

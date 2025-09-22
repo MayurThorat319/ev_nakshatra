@@ -8,7 +8,7 @@ const NakshatraSection: React.FC = () => {
   const [logoAnimation, setLogoAnimation] = useState("")
   const [headerAnimation, setHeaderAnimation] = useState("")
   const [imageWrapAnimation, setImageWrapAnimation] = useState("")
-  const [imageSrc, setImageSrc] = useState("/images/nakshatra.jpeg")
+  const [imageSrc, setImageSrc] = useState("/images/Mains.png")
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -25,7 +25,7 @@ const NakshatraSection: React.FC = () => {
         if (window.innerWidth <= 615) {
           setImageSrc("/images/Capitol_mobile.png")
         } else {
-          setImageSrc("/images/nakshatra.jpeg")
+          setImageSrc("/images/Mains.png")
         }
       }
 

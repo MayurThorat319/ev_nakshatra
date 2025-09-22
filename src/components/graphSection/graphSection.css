@@ -89,6 +89,7 @@
  
   .main-title{
     font-size: 5.5vw;
+      -webkit-text-stroke: 1px;
   }
   .infoContainer{
     font-size: 3vw;
@@ -115,6 +116,19 @@
   align-items: center;
   justify-content: center;
 }
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 }
 @media screen and (min-width:616px) and  (max-width:1000px){
     .main-title{
