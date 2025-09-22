@@ -409,7 +409,7 @@ width: 79vw;
   padding: 5px 0px;
   /* Updated background to darker color for better text contrast */
   background: rgba(0, 0, 0, 0.2);
-  border: 1px solid #00d4aa;
+  border: 1px solid #f8dc87;
   border-radius: 8px;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
@@ -441,7 +441,7 @@ width: 79vw;
   background: rgba(0, 0, 0, 1.0);
   border-radius: 50%;
   flex-shrink: 0;
-  border: 0.9px solid #00f5cc;
+  border: 0.9px solid #f8dc87;
   width: 8.5vh;
   height: 8.5vh;
 }

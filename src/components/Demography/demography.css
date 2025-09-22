@@ -19,8 +19,6 @@
   font-family: "Italiana", serif;
   font-size: 5vw;
   font-weight: bold;
-  
-  
   margin-bottom: 20px;
   letter-spacing: 8px;
 }
@@ -45,25 +43,33 @@
 
 .demographic-item {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   gap: 30px;
   padding: 20px 0;
 }
+.icon-text-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
 .demographic-icon {
   flex-shrink: 0;
-  width: 60px;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 80px;
+  height: 80px;
+  background: rgba(27, 27, 27, 0.7);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-right: 1vw;
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 2.5vw;
   filter: grayscale(1) brightness(2);
   display: flex;
   align-items: center;
@@ -75,9 +81,10 @@
 }
 
 .demographic-title-item {
-  font-size: 1.5rem;
+  font-family: "Jura";
+  font-size: 2.5vw;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   letter-spacing: 1px;
 }
 
@@ -91,43 +98,47 @@
 .value-badges {
   display: flex;
   gap: 15px;
+  font-family: "Jura";
+
+
 }
 
 .badge {
   padding: 6px 16px;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 1.5vw;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .badge.present {
-  background: #4ade80;
-  color: #000;
+  background: #98FF98;
+  color: #191970;
 }
 
 .badge.future {
-  background: #22d3ee;
-  color: #000;
+  background: #191970;
+  color: #98FF98;
 }
 
 .values-display {
   display: flex;
   gap: 20px;
   align-items: center;
+  font-family: "Jura";
 }
 
 .present-value {
-  font-size: 1.8rem;
+  font-size: 2vw;
   font-weight: bold;
-  color: #4ade80;
+  color: #98FF98;
 }
 
 .future-value {
-  font-size: 1.8rem;
+  font-size: 2vw;
   font-weight: bold;
-  color: #22d3ee;
+  color: #191970;
 }
 
 .progress-container {
@@ -149,11 +160,11 @@
 }
 
 .present-progress {
-  background: #4ade80;
+  background: #98FF98;
 }
 
 .future-progress {
-  background: #22d3ee;
+  background: #191970;
 }
 
 .value-labels {
@@ -173,15 +184,50 @@
 }
 
 .present-label {
-  color: #4ade80;
+  color: #98FF98;
 }
 
 .future-label {
-  color: #22d3ee;
+  color: #191970;
+}
+.main-demographic-values{
+  width: 100%;
 }
 
 /* Responsive Design */
 @media (max-width: 615px) {
+  .demographic-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 2vw;
+  }
+  .demographic-title-item {
+  font-family: "Jura";
+  font-size: 5.5vw;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+  .demographics-stats {
+  gap: 00px;
+}
+
+  .icon {
+    font-size: 8vw;
+
+  }
+.present-value {
+  font-size: 5vw;
+  font-weight: bold;
+  color: #98FF98;
+  -webkit-text-stroke: 0.5px;
+}
+.future-value {
+  font-size: 5vw;
+  font-weight: bold;
+  color: #191970;
+  -webkit-text-stroke: 0.5px;
+}
   .demographics-subtitle {
     font-size: 4vw;
   }
@@ -196,17 +242,31 @@
 
   .demographics-title {
     font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 3.5vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
   .demographic-item {
     flex-direction: column;
     gap: 20px;
+    display: flex;
     /* text-align: center; */
   }
 
   .demographic-values {
     flex-direction: row;
-    gap: 15px;
+    /* gap: 50px; */
+    width: 100%;
     align-items: center;
     justify-content: space-between;
   }
@@ -218,6 +278,8 @@
     justify-content: center;
     gap: 10px;
   }
+
+
 
   .label-group {
     justify-content: center;
@@ -247,16 +309,15 @@
   }
 } */
 @media (min-width: 616px) and (max-width: 3000px) {
+  .demographics-title {
+    font-family: "Italiana", serif;
+    font-size: 5vw;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.demographics-title {
-  font-family: "Italiana", serif;
-  font-size: 5vw;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  /* margin-bottom: 20px; */
-  letter-spacing: 8px;
-}
+    /* margin-bottom: 20px; */
+    letter-spacing: 8px;
   }
+}

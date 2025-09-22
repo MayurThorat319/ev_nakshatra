@@ -59,9 +59,10 @@ function App() {
       </div> */}
 
       <PremiumFacilities />
-      <TestimonialsSection />
+     
       {/* <ContactSection /> */}
        <Demographics />
+        <TestimonialsSection />
        <EventSignup />
       
       <footer

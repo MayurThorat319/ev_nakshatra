@@ -4,7 +4,7 @@ import "./graphSection.css";
 import {
   BarChart,
   Bar,
-  XAxis,                    
+  XAxis,
   YAxis,
   Tooltip,
   CartesianGrid,
@@ -12,6 +12,7 @@ import {
   Line,
 } from "recharts";
 import useDimention from "../../hooks/useDimension";
+import { useEffect, useRef, useState } from "react";
 
 const data = [
   { name: "2025", Price: 6000 },
@@ -19,57 +20,79 @@ const data = [
   { name: "2027", Price: 15000 },
   { name: "2028", Price: 20000 },
 ];
-const isMobile = window.innerWidth <=600
+const isMobile = window.innerWidth <= 600;
 
 const CustomGraph: React.FC = () => {
   const dimn = useDimention();
 
+   const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => setIsVisible(entry.isIntersecting));
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
   // Responsive settings based on device type
   const barSize = dimn === "mobile" ? 30 : dimn === "tablet" ? 40 : 80;
-  const chartHeight = dimn === "mobile" ? 350 : dimn === "tablet" ? 400 : 400  ;
+  const chartHeight = dimn === "mobile" ? 350 : dimn === "tablet" ? 400 : 400;
   const chartWidth =
     dimn === "mobile" ? "100%" : dimn === "tablet" ? "50%" : "50%";
   const tickFontSize = dimn === "mobile" ? 10 : 14;
   const categoryGap = dimn === "mobile" ? "15%" : "15%";
 
   const CustomTooltip = ({ active, payload, label }: any) => {
-  if (active && payload && payload.length) {
-    return (
-      <div
-      className="infoContainer"
-        style={{
-          backgroundColor: "#0d1b2a",
-          border: "1px solid #00e0ee",
-          borderRadius: "8px",
-          padding: "8px",
-          color: "#fff",
-        }}
-      >
-        <p style={{ margin: 0, fontWeight: "bold" }}>Year: {label}</p>
-        <p style={{ margin: 0, color: "#00e0ee" }}>
-          Price: {payload[0].value}
-        </p>
-      </div>
-    );
-  }
-  return null;
-};
-
+    if (active && payload && payload.length) {
+      return (
+        <div
+          className="infoContainer"
+          style={{
+            backgroundColor: "#0d1b2a",
+            border: "1px solid #00e0ee",
+            borderRadius: "8px",
+            padding: "8px",
+            color: "#fff",
+          }}
+        >
+          <p style={{ margin: 0, fontWeight: "bold" }}>Year: {label}</p>
+          <p style={{ margin: 0, color: "#00e0ee" }}>
+            Price: {payload[0].value}
+          </p>
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
-    <section className="navi-mumbai-section">
+      <section
+      ref={sectionRef}
+      className={`navi-mumbai-section fade-section ${
+        isVisible ? "visible" : ""
+      }`}
+    >
       <div className="content-container">
         <h1 className="main-title">
-          Navi Mumbai - India's Best Commercial Destination of the Future
+          Navi Mumbai - India's Best Commercial Hotspot
         </h1>
 
         <p className="description">
-          Navi Mumbai is rapidly establishing itself as a prime office hub, with
-          23.8 million sq ft of Grade A stock — nearly 20% of MMR's total — and
-          a healthy 87% occupancy rate. Competitive rentals, strong talent
-          availability, and upcoming infrastructure like the Trans Harbour Link
-          and Navi Mumbai International Airport are driving sustained corporate
-          demand, with another 4 million sq ft of supply expected by FY2027–28.
+          Navi Mumbai – India’s Best Commercial Hotspot Navi Mumbai is rapidly
+          emerging as a key office hub, with 23.8 million sq ft of Grade A
+          space—nearly 20% of MMR’s stock—and a robust 87% occupancy rate.
+          Competitive rentals, abundant talent, and major infrastructure
+          projects like the Trans Harbour Link and upcoming international
+          airport are driving demand, with 4 million sq ft of new supply
+          expected by FY2027–28.
         </p>
 
         <div
@@ -80,7 +103,11 @@ const CustomGraph: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <ResponsiveContainer width={chartWidth} height={chartHeight} style={{margin:" 0 auto"}}>
+          <ResponsiveContainer
+            width={chartWidth}
+            height={chartHeight}
+            style={{ margin: " 0 auto" }}
+          >
             <BarChart
               data={data}
               margin={{ top: 10, right: 30, left: 10, bottom: 50 }}
@@ -137,24 +164,20 @@ const CustomGraph: React.FC = () => {
               </defs>
 
               <YAxis
-            tickSize={5}
+                tickSize={5}
                 stroke="#fff"
                 axisLine={{ stroke: "#fff", markerStart: "url(#arrowhead-up)" }}
                 tick={{ fill: "#fff", fontSize: tickFontSize }}
                 label={{
-                  
                   value: "Price per sq ft",
-                  angle: -90, 
-                  dx: isMobile ?-20:-35,
+                  angle: -90,
+                  dx: isMobile ? -20 : -35,
                   position: "outsideLeft",
                   style: { textAnchor: "middle", fill: "#fff", fontSize: 16 },
                 }}
               />
 
-              <Tooltip
-                cursor={false}
-             content={CustomTooltip}
-              />
+              <Tooltip cursor={false} content={CustomTooltip} />
 
               <Bar
                 dataKey="Price"
