@@ -52,24 +52,23 @@ const Demographics: React.FC = () => {
       <div className="demographics-container">
         <h2 className="demographics-title">DEMOGRAPHY</h2>
         <p className="demographics-subtitle">
-          Vashi Boasts of High End and High Value Homes which translates to more
-          High Net Worth Homebuyers Moving into Vashi, and Upcoming Projects and
-          Further Migration of High Net Worth Individuals in to Vashi would make
-          it one of the single Largest Aggregation of High Net Worth Individuals
-          in One locality.
+          Vashi’s high-end, high-value homes are attracting a growing number of
+          high-net-worth homebuyers. With new luxury projects and continued
+          migration, it's set to become one of the largest concentrations of
+          HNIs in a single locality.
         </p>
 
         <div className="demographics-stats">
           {demographicData.map((item, index) => (
             <div key={index} className="demographic-item">
               <div className="icon-text-main">
-              <div className="demographic-icon">
-                <span className="icon">{item.icon}</span>
-              </div>
+                <div className="demographic-icon">
+                  <span className="icon">{item.icon}</span>
+                </div>
 
-              <div className="demographic-content">
-                <h3 className="demographic-title-item">{item.title}</h3>
-              </div>
+                <div className="demographic-content">
+                  <h3 className="demographic-title-item">{item.title}</h3>
+                </div>
               </div>
               <div className="main-demographic-values">
                 <div className="demographic-values">

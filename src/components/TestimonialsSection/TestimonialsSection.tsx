@@ -25,21 +25,21 @@ const defaultTestimonials: Testimonial[] = [
     name: "THE KAMAT'S",
     text: "The world-class amenities truly bring comfort and luxury to everyday living.",
     rating: 5,
-    avatar: "images/kamat.png",
+    avatar: "images/kamat_1.png",
   },
   {
     id: 2,
     name: "THE BAFNA'S",
     text: "The location is prime, saving both time and travel hassle for daily needs.",
     rating: 5,
-    avatar: "images/bafnas.jpg",
+    avatar: "images/bafna_1.jpg",
   },
   {
     id: 3,
     name: "THE JAIN'S",
     text: "Kids have their own fun and secure spaces.",
     rating: 5,
-    avatar: "images/jains.jpg",
+    avatar: "images/jains_1.jpg",
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "THE SALDUR'S",
     text: "Post-sales service is excellent, with quick response and helpful solutions for any issue.",
     rating: 5,
-    avatar: "images/saldurs.png",
+    avatar: "images/saldurs_1.png",
   },
 ];
 
@@ -63,21 +63,21 @@ const defaultSecondSliderTestimonials: Testimonial[] = [
     name: "THE GUJAR'S",
     text: "The apartment is very spacious and it truly feels like our dream home come true.",
     rating: 5,
-    avatar: "images/gujars.png",
+    avatar: "images/gujars_1.png",
   },
   {
     id: 2,
     name: "THE PEDNEKAR'S",
     text: "Construction is happening very quickly in Vashi than expected.",
     rating: 5,
-    avatar: "images/pednekars.png",
+    avatar: "images/pednekars_1.png",
   },
   {
     id: 3,
     name: "THE SOLASKAR'S",
     text: "Early possession with top-quality construction made the experience even better.",
     rating: 5,
-    avatar: "images/solaskars.png",
+    avatar: "images/solaskars_1.png",
   },
   {
     id: 4,
@@ -91,7 +91,7 @@ const defaultSecondSliderTestimonials: Testimonial[] = [
     name: "THE KAR'S",
     text: "The view is amazing and the location is perfect, with everything we need close by.",
     rating: 5,
-    avatar: "images/kars.png",
+    avatar: "images/kars_1.png",
   },
 ];
 
@@ -101,21 +101,21 @@ const defaultThirdSliderTestimonials: Testimonial[] = [
     name: "THE RAJMOHAN'S",
     text: "The commercial spaces are vastu-designed and were handed over right on time.",
     rating: 5,
-    avatar: "images/rajmohan.png",
+    avatar: "images/rajmohan_1.png",
   },
   {
     id: 2,
     name: "THE SODHI'S",
     text: "Spacious offices with modern design, making it comfortable for both clients and employees.",
     rating: 5,
-    avatar: "images/sodhi.jpeg",
+    avatar: "images/sodhi_1.jpeg",
   },
   {
     id: 3,
     name: "THE MEHTA'S",
     text: "The location is excellent, with easy connectivity and great visibility for business.",
     rating: 5,
-    avatar: "images/mehta.webp",
+    avatar: "images/mehta_1.webp",
   },
   {
     id: 4,
