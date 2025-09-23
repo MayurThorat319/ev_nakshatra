@@ -29,11 +29,12 @@
 .event-signup__title {
   font-family: "Italiana", serif;
   font-size: 7vw;
-  font-weight: 900;
+  font-weight: 400;
+  -webkit-text-stroke: 1px ;
   line-height: 0.9;
   margin-bottom: 3rem;
   text-transform: uppercase;
-  letter-spacing: 4%;
+  letter-spacing: 2.5px;
 }
 
 .event-signup__session h3 {

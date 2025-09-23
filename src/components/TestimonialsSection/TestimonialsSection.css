@@ -1,10 +1,30 @@
 .testimonials-section {
+  position: relative;
   padding: 4rem 2rem;
-  background-color: #f8fafc;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  background: url("images/dummy.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow: hidden;
 }
+
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.01); /* dark overlay */
+  backdrop-filter: blur(4px);   /* blur effect */
+  z-index: 0;
+}
+
+.testimonials-section > * {
+  position: relative;
+  z-index: 1; /* keep content above overlay */
+}
+
 
 .testimonials-container {
   max-width: 1400px;
@@ -302,6 +322,7 @@
 @media screen and (max-width: 768px) {
   .testimonials-section {
     min-height: 70vh;
+    background: white;
   }
   .testimonials-description {
     display: none;

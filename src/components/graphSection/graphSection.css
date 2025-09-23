@@ -41,7 +41,7 @@
   margin-bottom: 40px;
   line-height: 1.2;
   letter-spacing: 0.1em;
-  word-spacing: -0.3em;
+  word-spacing: -0.2em;
   color:#f8dc87 ;
   display: flex;
   justify-content: center;
@@ -90,6 +90,8 @@
   .main-title{
     font-size: 5.5vw;
       -webkit-text-stroke: 1px;
+      letter-spacing: 3px;  
+
   }
   .infoContainer{
     font-size: 3vw;
