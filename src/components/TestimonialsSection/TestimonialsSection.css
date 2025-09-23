@@ -16,7 +16,7 @@
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.01); /* dark overlay */
-  backdrop-filter: blur(4px);   /* blur effect */
+  backdrop-filter: blur(6px);   /* blur effect */
   z-index: 0;
 }
 
@@ -256,11 +256,16 @@
 
   .testimonials-title {
     font-size: 30px;
+    -webkit-text-stroke: 0.5px;
   }
 
   .testimonials-subtitle {
     font-size: 1.25rem;
   }
+
+  .testimonials-header {
+  margin-bottom: 60px;
+}
 
   .testimonial-card {
     max-width: 240px;
