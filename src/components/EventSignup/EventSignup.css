@@ -161,7 +161,11 @@
   padding: 3rem;
   border-radius: 10px;
   backdrop-filter: blur(5px);
+  height: 40vh;
+  top: 15%;
   position: relative;
+   border: 1px solid #f8dc87; /* light border */
+  box-shadow: 0 0 8px #f8dc87;
 }
 
 .event-signup__form-title {
@@ -186,11 +190,11 @@
 }
 
 .blue-input {
-  color: #2c3e50;
+  color: #f8dc87;
 }
 
 .blue-input::placeholder {
-  color: #2c3e50;
+  color: #f8dc87;
   opacity: 1;  /* ensures it’s fully visible */
 }
 
@@ -202,7 +206,7 @@
 .form-group label {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: #f8dc87;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -214,13 +218,13 @@
   border-bottom: 2px solid #e0e0e0;
   background: transparent;
   font-size: 1rem;
-  color: #333;
+  color: #f8dc87;
   transition: border-color 0.3s ease;
 }
 
 .form-group input:focus {
   outline: none;
-  border-bottom-color: #3498db;
+  border-bottom-color: #f8dc87;
 }
 
 .form-group input::placeholder {
@@ -241,7 +245,7 @@
 }
 
 .event-signup__submit {
-  background: #0d263f;
+  background: #037cdf;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -256,7 +260,7 @@
 }
 
 .event-signup__submit:hover {
-  background: #34495e;
+  /* background: #34495e; */
 }
 
 .social-icons {
@@ -373,6 +377,8 @@
 
   .event-signup__right {
     padding: 2rem;
+    height: 50vh;
+    top: 0%;
   }
 
   .social-icons {
@@ -402,10 +408,17 @@
     font-size: 2rem;
   }
 }
-@media (max-width: 1330px) and (min-width: 769px) {
+@media (max-width: 1430px) and (min-width: 769px) {
 
 .event-signup {
 
   padding: 2rem 4.5rem 2rem 2rem;
 }
+
+.event-signup__right {
+    padding: 2rem;
+    height: 50vh;
+    top: 0%;
+  }
+
 }
