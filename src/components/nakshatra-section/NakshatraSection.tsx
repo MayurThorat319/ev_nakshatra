@@ -56,7 +56,7 @@ const NakshatraSection: React.FC = () => {
     setLogoAnimation("nakshatra__brand-logo--fade-out")
     setHeaderAnimation("nakshatra__header--collapse")
     setImageWrapAnimation("nakshatra__image-wrap--expand")
-  }, 5000) // all at same moment
+  }, 3000) // all at same moment
 
 
   return () => {
@@ -69,11 +69,11 @@ const NakshatraSection: React.FC = () => {
   return (
     <section className="nakshatra">
       <div className={`nakshatra__header ${headerAnimation}`}>
-        <img 
+        {/* <img 
           src="/images/logo.png" 
           alt="EVM Homes Logo" 
           className={`nakshatra__brand-logo ${logoAnimation}`} 
-        />
+        /> */}
         <h1 className={`nakshatra__title ${titleAnimation}`}>
   CAPITOL <span className="inria">9</span>
 </h1>

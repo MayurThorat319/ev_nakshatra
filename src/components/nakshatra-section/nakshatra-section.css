@@ -261,7 +261,7 @@
     flex-direction: column;
     text-align: center;
     height: auto;
-    min-height: 140px;
+    min-height: 40px;
   }
 
   .nakshatra__header--collapse {
