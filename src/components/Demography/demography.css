@@ -1,13 +1,13 @@
 .demographics-section {
   background: linear-gradient(rgba(26, 26, 46, 0.5), rgba(15, 52, 96, 0.5)),
-    url("https://cdn.evhomes.tech/88d131f0-7584-4260-a554-b818aea73720-demography_new.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlbmFtZSI6Ijg4ZDEzMWYwLTc1ODQtNDI2MC1hNTU0LWI4MThhZWE3MzcyMC1kZW1vZ3JhcGh5X25ldy5qcGVnIiwiaWF0IjoxNzU4MTkwNjU5fQ.CRWqdk1kEqPMZCpjvuTJ-hfVCq5LpDCns-R24xI2DP0"); /* replace with your actual image file */
-  background-size: cover;
-  background-position: center;
+    /* url("images/demography_bg.png"); replace with your actual image file */
+  /* background-size: cover; */
+  /* background-position: center; */
   /* background-attachment: fixed; optional: makes background stay while scrolling */
-  color: white;
-  padding: 60px 20px;
-  min-height: 100vh;
-  font-family: "Arial", sans-serif;
+  /* color: white; */
+  /* padding: 60px 20px; */
+  /* height: 100%; */
+  /* font-family: "Arial", sans-serif; */
 }
 
 .demographics-container {
@@ -230,9 +230,11 @@
 }
   .demographics-subtitle {
     font-size: 4.5vw;
+    color: black;
   }
   .demographic-content {
     flex: 1;
+     color: black;
     width: 100%;
   }
 
@@ -245,6 +247,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
   }
 
   .badge {
