@@ -5,7 +5,7 @@ import "./nakshatra-section.css"
 
 const NakshatraSection: React.FC = () => {
   const [titleAnimation, setTitleAnimation] = useState("")
-  const [logoAnimation, setLogoAnimation] = useState("")
+  const [, setLogoAnimation] = useState("")
   const [headerAnimation, setHeaderAnimation] = useState("")
   const [imageWrapAnimation, setImageWrapAnimation] = useState("")
   const [imageSrc, setImageSrc] = useState("/images/Mains.png")
