@@ -4,7 +4,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url("images/dummy.jpg");
+  background: url("https://cdn.evhomes.tech/nakshatra/5ee67276-d542-4c13-abbe-dde7936f9bdd-dummy.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlbmFtZSI6IjVlZTY3Mjc2LWQ1NDItNGMxMy1hYmJlLWRkZTc5MzZmOWJkZC1kdW1teS5qcGciLCJpYXQiOjE3NTg2OTQ4NDB9.iIiZJ7ZSMruxJEGCen1bIrMOSUlOek7YNDuiV5KBipM");
   background-size: cover;
   background-position: center;
   color: white;
