@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./EventSignup.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { ImLocation2 } from "react-icons/im";
@@ -10,6 +10,7 @@ import SocialLink from "../SocialLink";
 
 
 const EventSignup: React.FC = () => {
+  // ✅ keep form state
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -27,11 +28,33 @@ const EventSignup: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Handle form submission here
+    // TODO: send formData to backend/email API
   };
 
+  // ✅ background skeleton
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  const bgUrl =
+    "https://cdn.evhomes.tech/2da3da0d-c5ab-4147-9b3b-bfed991972d0-contact.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlbmFtZSI6IjJkYTNkYTBkLWM1YWItNDE0Ny05YjNiLWJmZWQ5OTE5NzJkMC1jb250YWN0LnBuZyIsImlhdCI6MTc1ODExOTI3Nn0.aH0qMH_bsK-yzXcodI4yLE7CrB9lBydifG0m6K7or3c";
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = bgUrl;
+    img.onload = () => setBgLoaded(true);
+  }, [bgUrl]);
+
   return (
-    <section id="contact" className="event-signup">
+    <section
+      id="contact"
+      className="event-signup"
+      style={{
+        background: bgLoaded
+          ? `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${bgUrl}) center/cover no-repeat`
+          : "none",
+      }}
+    >
+      {/* Skeleton while background loads */}
+      {!bgLoaded && <div className="event-signup__skeleton"></div>}
       <div className="event-signup__container">
         {/* Left Side - Event Details */}
         <div className="event-signup__left">
