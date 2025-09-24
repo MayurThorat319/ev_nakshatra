@@ -16,7 +16,7 @@
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.01); /* dark overlay */
-  backdrop-filter: blur(6px);   /* blur effect */
+  backdrop-filter: blur(3px);   /* blur effect */
   z-index: 0;
 }
 
@@ -326,10 +326,13 @@
 }
 /* sfsijf */
 @media screen and (max-width: 768px) {
-  .testimonials-section {
-    min-height: 70vh;
-    background: white;
-  }
+.testimonials-section {
+  min-height: 70vh;
+  background: url("images/bg_gold.webp") center/cover no-repeat;
+  background-color: transparent; /* allow transparency */
+
+}
+
   .testimonials-description {
     display: none;
   }
