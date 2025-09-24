@@ -9,6 +9,7 @@ const NakshatraSection: React.FC = () => {
   const [headerAnimation, setHeaderAnimation] = useState("")
   const [imageWrapAnimation, setImageWrapAnimation] = useState("")
   const [imageSrc, setImageSrc] = useState("/images/Mains.png")
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -81,11 +82,14 @@ const NakshatraSection: React.FC = () => {
       </div>
 
       <div className={`nakshatra__image-wrap ${imageWrapAnimation}`}>
+          {!imageLoaded && <div className="nakshatra__image-skeleton"></div>}
+
         <img
           src={imageSrc}
           alt="Modern high-rise towers"
           className="nakshatra__image"
-          loading="lazy"
+          style={{ display: imageLoaded ? "block" : "none" }}
+          onLoad={() => setImageLoaded(true)} // ✅ trigger when loaded
         />
     
         <div className="nakshatra__label nakshatra__label--nakshatra">Capitol 9</div>
