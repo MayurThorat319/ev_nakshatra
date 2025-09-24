@@ -210,6 +210,32 @@
   flex-direction: column;
 }
 
+.avatar-skeleton {
+  width: 50px;   /* match avatar size */
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    #f3f4f6 0%,
+    #e5e7eb 20%,
+    #f3f4f6 40%,
+    #f3f4f6 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  display: inline-block;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
 .testimonial-author {
   display: flex;
   align-items: center;
