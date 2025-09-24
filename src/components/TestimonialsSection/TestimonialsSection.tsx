@@ -186,35 +186,41 @@ const TestimonialSlider = ({
       if (!scrollerInner) return
 
       // Create testimonial cards
-      const createTestimonialElement = (testimonial: Testimonial) => {
-        const cardDiv = document.createElement("div")
-        cardDiv.className = "testimonial-item";
+const createTestimonialElement = (testimonial: Testimonial) => {
+  const cardDiv = document.createElement("div");
+  cardDiv.className = "testimonial-item";
 
-        cardDiv.innerHTML = `
-          <div class="testimonial-card">
-            <div class="star-rating">
-              ${[...Array(5)]
-                .map(
-                  (_, index) =>
-                    `<span class="star ${
-                      index < testimonial.rating ? "filled" : ""
-                    }">★</span>`
-                )
-                .join("")}
-            </div>
-             <div class="testimonial-author">
-              <span class="author-name">${testimonial.name}</span>
-               <img src="${testimonial.avatar}" alt="${
-          testimonial.name
-        }" class="author-avatar" />
-            </div>
-            <p class="testimonial-text">${testimonial.text}</p>
-           
-          </div>
-        `;
+  cardDiv.innerHTML = `
+    <div class="testimonial-card">
+      <div class="star-rating">
+        ${[...Array(5)]
+          .map(
+            (_, index) =>
+              `<span class="star ${index < testimonial.rating ? "filled" : ""}">★</span>`
+          )
+          .join("")}
+      </div>
+      <div class="testimonial-author">
+        <span class="author-name">${testimonial.name}</span>
+        <div class="avatar-skeleton"></div>
+      </div>
+      <p class="testimonial-text">${testimonial.text}</p>
+    </div>
+  `;
 
-        return cardDiv;
-      };
+  // Handle avatar image
+  const img = new Image();
+  img.src = testimonial.avatar;
+  img.alt = testimonial.name;
+  img.className = "author-avatar";
+  img.onload = () => {
+    const skeleton = cardDiv.querySelector(".avatar-skeleton");
+    if (skeleton) skeleton.replaceWith(img);
+  };
+
+  return cardDiv;
+};
+
 
       // Create original items
       testimonials.forEach((testimonial) => {
