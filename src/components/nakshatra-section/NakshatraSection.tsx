@@ -9,8 +9,6 @@ const NakshatraSection: React.FC = () => {
   const [headerAnimation, setHeaderAnimation] = useState("")
   const [imageWrapAnimation, setImageWrapAnimation] = useState("")
   const [imageSrc, setImageSrc] = useState("/images/Mains.png")
-  const [imageLoaded, setImageLoaded] = useState(false);
-  
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.history.scrollRestoration = "manual"
