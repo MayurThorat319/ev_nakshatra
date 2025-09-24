@@ -16,7 +16,7 @@
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.01); /* dark overlay */
-  backdrop-filter: blur(6px);   /* blur effect */
+  backdrop-filter: blur(4px);   /* blur effect */
   z-index: 0;
 }
 
@@ -328,7 +328,8 @@
 @media screen and (max-width: 768px) {
   .testimonials-section {
     min-height: 70vh;
-    background: white;
+    background: linear-gradient(to bottom, #ffffff, #327f9648);
+
   }
   .testimonials-description {
     display: none;
