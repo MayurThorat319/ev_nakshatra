@@ -4,7 +4,7 @@
     url("https://cdn.evhomes.tech/2da3da0d-c5ab-4147-9b3b-bfed991972d0-contact.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlbmFtZSI6IjJkYTNkYTBkLWM1YWItNDE0Ny05YjNiLWJmZWQ5OTE5NzJkMC1jb250YWN0LnBuZyIsImlhdCI6MTc1ODExOTI3Nn0.aH0qMH_bsK-yzXcodI4yLE7CrB9lBydifG0m6K7or3c");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -386,7 +386,7 @@
     position: static;
     flex-direction: row;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     transform: none;
   }
 }
