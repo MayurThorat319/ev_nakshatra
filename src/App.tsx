@@ -93,12 +93,10 @@ function App() {
           >
             <div style={{ textAlign: "start" }}>
               <img
-                src="images/ev_logo.png"
+                src="images/ev_logos.png"
                 alt="EV Homes Logo"
-                style={{
-                  height: "50px", // adjust size as needed
-                  objectFit: "contain",
-                }}
+               width={151}
+               height={35}
               />
             </div>
           </div>
@@ -124,6 +122,7 @@ function App() {
                   fontWeight: "600",
                   marginBottom: "20px",
                   color: "#ffffff",
+                  fontFamily: "Jura, sans-serif",
                 }}
               >
                 Quick Links
@@ -148,6 +147,7 @@ function App() {
                       textDecoration: "none",
                       fontSize: "0.9rem",
                       transition: "color 0.3s ease",
+                      fontFamily: "Jura, sans-serif",
                     }}
                     onMouseOver={(e) =>
                       (e.currentTarget.style.color = "#f8dc87")
@@ -170,6 +170,7 @@ function App() {
                       textDecoration: "none",
                       fontSize: "0.9rem",
                       transition: "color 0.3s ease",
+                      fontFamily: "Jura, sans-serif",
                     }}
                     onMouseOver={(e) =>
                       (e.currentTarget.style.color = "#f8dc87")
@@ -193,6 +194,7 @@ function App() {
                           textDecoration: "none",
                           fontSize: "0.9rem",
                           transition: "color 0.3s ease",
+                          fontFamily: "Jura, sans-serif",
                         }}
                         onMouseOver={(e) =>
                           (e.currentTarget.style.color = "#f8dc87")
@@ -217,6 +219,7 @@ function App() {
                   fontWeight: "600",
                   marginBottom: "20px",
                   color: "#ffffff",
+                  fontFamily: "Jura, sans-serif",
                 }}
               >
                 Contact Us
@@ -239,6 +242,7 @@ function App() {
                     display: "block",
                     marginBottom: "8px",
                     transition: "color 0.3s ease",
+                    fontFamily: "Jura, sans-serif",
                   }}
                   onMouseOver={(e) => (e.currentTarget.style.color = "#f8dc87")}
                   onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
@@ -257,6 +261,7 @@ function App() {
                     display: "block",
                     marginBottom: "8px",
                     transition: "color 0.3s ease",
+                    fontFamily: "Jura, sans-serif",
                   }}
                   onMouseOver={(e) => (e.currentTarget.style.color = "#f8dc87")}
                   onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
@@ -274,6 +279,7 @@ function App() {
                   fontWeight: "600",
                   marginBottom: "20px",
                   color: "#ffffff",
+                  fontFamily: "Jura, sans-serif",
                 }}
               >
                 Our Address
@@ -293,6 +299,7 @@ function App() {
                     display: "block",
                     marginBottom: "8px",
                     transition: "color 0.3s ease",
+                    fontFamily: "Jura, sans-serif",
                   }}
                   onMouseOver={(e) => (e.currentTarget.style.color = "#f8dc87")}
                   onMouseOut={(e) => (e.currentTarget.style.color = "#ccc")}
@@ -321,6 +328,7 @@ function App() {
                   fontWeight: "600",
                   marginBottom: "20px",
                   color: "white",
+                  fontFamily: "Jura, sans-serif",
                 }}
               >
                 Get the app
