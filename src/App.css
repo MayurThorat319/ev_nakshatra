@@ -113,3 +113,16 @@ body {
     overflow-x: hidden;
   }
 }
+
+@media (max-width: 615px) {
+  .footer-grid-content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* two columns */
+    gap: 30px !important;
+  }
+
+  /* optional: make sure items align left inside */
+  .footer-grid-content > div {
+    text-align: start;
+  }
+}

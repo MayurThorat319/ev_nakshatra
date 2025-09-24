@@ -103,6 +103,7 @@ function App() {
 
           {/* Main footer content */}
           <div
+          className="footer-grid-content"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
