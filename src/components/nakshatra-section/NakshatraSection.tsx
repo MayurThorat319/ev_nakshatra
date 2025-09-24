@@ -10,7 +10,7 @@ const NakshatraSection: React.FC = () => {
   const [imageWrapAnimation, setImageWrapAnimation] = useState("")
   const [imageSrc, setImageSrc] = useState("/images/Mains.png")
   const [imageLoaded, setImageLoaded] = useState(false);
-
+  
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.history.scrollRestoration = "manual"
@@ -82,14 +82,11 @@ const NakshatraSection: React.FC = () => {
       </div>
 
       <div className={`nakshatra__image-wrap ${imageWrapAnimation}`}>
-          {!imageLoaded && <div className="nakshatra__image-skeleton"></div>}
-
         <img
           src={imageSrc}
           alt="Modern high-rise towers"
           className="nakshatra__image"
-          style={{ display: imageLoaded ? "block" : "none" }}
-          onLoad={() => setImageLoaded(true)} // ✅ trigger when loaded
+          loading="lazy"
         />
     
         <div className="nakshatra__label nakshatra__label--nakshatra">Capitol 9</div>

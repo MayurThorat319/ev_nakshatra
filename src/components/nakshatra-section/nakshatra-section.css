@@ -18,30 +18,6 @@
   overflow: hidden;
 }
 
-.nakshatra__image-skeleton {
-  width: 100%;
-  height: 100%;
-  border-radius: 14px; /* match your image wrap */
-  background: linear-gradient(
-    90deg,
-    #f3f4f6 0%,
-    #e5e7eb 20%,
-    #f3f4f6 40%,
-    #f3f4f6 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
 
 /* Header with logo aligned left and title centered */
 .nakshatra__header {
